@@ -176,7 +176,7 @@ body { font-family: sans-serif; }
     justify-content: space-between;
     align-items: center;
 }
-.gadget>div>button{
+.gadget>div>a>button{
     padding-left: 30px;
     color:darkcyan;
     background-color: white;

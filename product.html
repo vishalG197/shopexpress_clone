@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping Express</title>
+    <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./product.css">
+
+</head>
+<body>
+    <div id="nav">
+        <a href="./index.html"><img src="./images/project logo.png" alt="logo"></a>
+        <form id="form">
+            <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input type="text" placeholder="What is on your mind today?">
+            <button>Search</button>
+        </form>
+        <div id="anchore">
+        <a href=""><i class="fa-regular fa-bell"></i></a>
+        <a href="./cart.html"><i class="fa-regular fa-heart"></i></a>
+        <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="">Sign in</a>
+        </div>
+    </div>
+    <div>
+        <select name="sort by" id="sorting">
+            <option value="All">Sort by</option>
+            <option value="incresing">low to high</option>
+            <option value="decresing">high to low</option>
+            <option value="below">price below Rs500</option>
+            <option value="above">price above Rs500</option>
+        </select>
+    </div>
+    <div id="product-container">
+        <!-- append product here  -->
+    </div>
+</body>
+<script>
+
+    async function Data(){
+        try{
+            let res1= await fetch("./Data.json");
+            res1= await res1.json();
+            console.log(res1);
+
+            DisplayProduct(res1);
+        }catch{
+            console.log("error");
+        }
+    }
+    // fetchedData();
+    Data();
+
+    let productArr=JSON.parse(localStorage.getItem("product"))||[];
+    console.log(productArr);
+    let Container=document.getElementById("product-container")
+    function DisplayProduct(data){
+      Container.innerHTML=""
+        data.forEach((product)=>{
+            let card=document.createElement("div")
+            let image=document.createElement("img")
+            let title=document.createElement("p");
+            let price=document.createElement("h4")
+            let add_to_cart=document.createElement("button")
+              add_to_cart.textContent="Add to Cart"
+              image.src=product.image;
+             title.textContent=product.title;
+              price.textContent=`₹${product.price}`;
+            add_to_cart.addEventListener("click",()=>{
+                 
+                if(checkDuplicate(product)){
+                  alert("Product Already in Cart")
+                }else{
+                  productArr.push({...product,quantity:1})
+                  localStorage.setItem("product",JSON.stringify(productArr))
+                  alert("Product Added To Cart")
+
+                }
+            })
+              card.append(image,title,price,add_to_cart)
+              Container.append(card)
+        })
+
+
+
+
+    }
+    function  checkDuplicate(product){
+        for(let i=0;i<productArr.length;i++){
+          if(productArr[i].id===product.id){
+            return true
+          }
+        }
+        return false
+   }
+          
+</script>
+</html>

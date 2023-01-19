@@ -1,0 +1,601 @@
+[
+    {
+        "id": 1,
+        "title": "MSG Cow Desi Ghee",
+        "price": 432,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/109542/280/1/150679933-109542035-1664654744.jpg"
+
+    },
+    {
+        "id": 2,
+        "title": "VeeTee",
+        "price": 248,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/116400/280/1/153086603-116400600-1656588890.jpg"
+
+    },    {
+        "id": 3,
+        "title": "Jaggery Powder",
+        "price": 187,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/116240/280/1/153045770-116240720-1649410479.jpg"
+
+    },    {
+        "id": 4,
+        "title": "Auth",
+        "price": 1947,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/113420/280/1/152087676-113420666-1615534234.jpg"
+
+    },    {
+        "id": 5,
+        "title": "Everyday",
+        "price":749,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/116373/280/1/153078100-116373181-1655368419.jpg"
+
+    },    {
+        "id": 6,
+        "title": "Mega Basmati",
+        "price": 321,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/116400/280/1/153086605-116400608-1656588909.jpg"
+
+    },    {
+        "id": 7,
+        "title": "coconut oil",
+        "price": 800,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/115708/280/1/152842704-115708470-1635765377.jpg"
+
+    },    {
+        "id": 8,
+        "title": "Toor dal",
+        "price": 108,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/115716/280/1/152843784-115716548-1636379288.jpg"
+
+    },    {
+        "id": 9,
+        "title": "Desi Khand",
+        "price": 198,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/116333/280/1/153072854-116333519-1654504380.jpg"
+
+    },    {
+        "id": 10,
+        "title": "Organic Jaggery",
+        "price": 198,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/116333/280/1/153072855-116333520-1654504394.jpg"
+
+    },    {
+        "id": 11,
+        "title": "Shakkar",
+        "price": 295,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/114844/280/1/152570230-114844969-1627301051.jpg"
+
+    },    {
+        "id": 12,
+        "title": "Khabuli Channa",
+        "price": 215,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/116083/280/1/152983036-116083584-1645780592.jpg"
+
+    },    {
+        "id": 13,
+        "title": "PURE oil",
+        "price": 350,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/116386/280/1/153082666-116386526-1655992726.jpg"
+
+    },    {
+        "id": 14,
+        "title": "oil",
+        "price": 499,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images1/thumbnails/91561/280/1/140433582-91561309-1611140007.jpg"
+
+    },    {
+        "id": 15,
+        "title": "Pam canola cooking",
+        "price":725,
+
+        "category":"Daily Essential",
+        "image": "https://cdn.shopclues.com/images/thumbnails/80150/280/1/12487898881YQKoYxAGL1502473426.jpg"
+
+    },
+   
+    {
+        "id": 16,
+        "title": "fitness",
+        "price":925,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/72738/280/1/129737733-72738612-1610443592.jpg"
+
+    },{
+        "id": 17,
+        "title": "wireless heathcare",
+        "price":725,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/57212/280/1/94757800-57212013-1665755900.jpg"
+
+    },{
+        "id": 18,
+        "title": "whey protein",
+        "price":525,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images/banners/Work/widgetClp/Nutrition/brands_on.jpg"
+
+    },{
+        "id": 19,
+        "title": "muslebleze",
+        "price":1245,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/91669/200/200/140497314-91669677-1554537155.jpg"
+
+    },{
+        "id": 21,
+        "title": "weight lifting",
+        "price":700,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/59324/280/1/121021478-59324063-1654516092.jpg"
+
+    },{
+        "id": 23,
+        "title": "yoga mat",
+        "price":725,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/4791/280/1/337310-4791114-1653490117.jpg"
+
+    },{
+        "id": 24,
+        "title": "Simple Spring",
+        "price":725,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/90536/280/1/140036963-90536077-1671186494.jpg"
+
+    },{
+        "id": 25,
+        "title": "MRF BAT",
+        "price":2525,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/48246/280/1/118746101-48246979-1662567622.jpg"
+
+    },{
+        "id": 26,
+        "title": "guard",
+        "price":725,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/15103/280/1/97778673-15103542-1673510899.jpg"
+
+    },{
+        "id": 27,
+        "title": "badminton",
+        "price":425,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/20824/280/1/89096665-20824680-1655210934.jpg"
+
+    },{
+        "id": 28,
+        "title": "Carrom",
+        "price":725,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/99833/280/1/145886172-99833969-1567069703.jpg"
+
+    },{
+        "id": 29,
+        "title": "cricket bat",
+        "price":435,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/90012/280/1/139845448-90012939-1660934973.jpg"
+
+    },{
+        "id": 30,
+        "title": "Lower ride",
+        "price":725,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/113808/280/1/152219245-113808294-1671186828.jpg"
+
+    },{
+        "id": 31,
+        "title": "micromax X702",
+        "price":3725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/116114/320/320/152991090-116114751-1646204285.jpg"
+
+    },{
+        "id": 32,
+        "title": "micromax X419",
+        "price":2725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/112862/280/1/151846903-112862628-1610203289.jpg"
+
+    },{
+        "id": 33,
+        "title": "Macromax",
+        "price":1725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/116114/280/1/152991080-116114699-1646204210.jpg"
+
+    },{
+        "id": 34,
+        "title": "oppo A9",
+        "price":98725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/104545/280/1/148838372-104545630-1662708605.jpg"
+
+    },{
+        "id": 35,
+        "title": "realme narzo 50i",
+        "price":725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/116600/280/1/153163735-116600587-1663156378.jpg"
+
+    },{
+        "id": 36,
+        "title": "realme narzo 50A",
+        "price":725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/116443/280/1/153100702-116443230-1658747880.jpg"
+
+    },{
+        "id": 37,
+        "title": "Real me C20",
+        "price":99725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/116443/280/1/153100694-116443219-1658747741.jpg"
+
+    },{
+        "id": 38,
+        "title": "Sketchfab Universal",
+        "price":76725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/87345/280/1/138397270-87345388-1653666890.jpg"
+
+    },{
+        "id": 39,
+        "title": "Sansung M32",
+        "price":725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/116610/280/1/153167361-116610305-1663846315.jpg"
+
+    },{
+        "id": 40,
+        "title": "samsung M21",
+        "price":77725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/112893/280/1/151864842-112893315-1610599697.jpg"
+
+    },{
+        "id": 41,
+        "title": "Samsung Galaxy m31",
+        "price":24725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/112893/280/1/151864840-112893307-1610599651.jpg"
+
+    },{
+        "id": 42,
+        "title": "Redmi note 8",
+        "price":17725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/116680/280/1/153185418-116680401-1669192924.jpg"
+
+    },{
+        "id": 43,
+        "title": "Redmi 11 lite",
+        "price":20725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/116480/280/1/153106490-116480493-1659689869.jpg"
+
+    },{
+        "id": 44,
+        "title": "Redmi 10T",
+        "price":9725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/116480/280/1/153106484-116480461-1659689775.jpg"
+
+    },{
+        "id": 45,
+        "title": "redmi 9A",
+        "price":9725,
+
+        "category": "gadget",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/113498/280/1/152118822-113498668-1616585263.jpg"
+
+    },
+    {
+        "id": 46,
+        "title": "arti",
+        "price":749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/52501/280/1/116395107-52501340-1655916818.jpg"
+
+    },{
+        "id": 47,
+        "title": " ganesha murthi",
+        "price":749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/114331/280/1/152367906-114331253-1664017987.jpg"
+
+    },{
+        "id": 48,
+        "title": "multipurpose table",
+        "price":1749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/74107/280/1/130624146-74107836-1662589603.jpg"
+
+    },{
+        "id": 49,
+        "title": "teal chair",
+        "price":8749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/113810/280/1/152220086-113810385-1619445139.jpg"
+
+    },{
+        "id": 50,
+        "title": "manuel recleaner",
+        "price":22749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/30307/280/1/105803872-30307576-1672997059.jpg"
+
+    },{
+        "id": 51,
+        "title": "blue were",
+        "price":1749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/24544/280/1/97282269-24544755-1655385149.jpg"
+
+    },{
+        "id": 52,
+        "title": "yellow Kurti",
+        "price":749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/109203/280/1/150594069-109203066-1662585310.jpg"
+
+    },{
+        "id": 53,
+        "title": "blue Designer",
+        "price":2749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/36572/280/1/101672252-36572508-1669663312.jpg"
+
+    },{
+        "id": 54,
+        "title": "RG",
+        "price":749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/68270/280/1/126233020-68270411-1662700234.jpg"
+
+    },{
+        "id": 55,
+        "title": "White Kurta",
+        "price":1249,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/61687/280/1/121759054-61687217-1662588917.jpg"
+
+    },{
+        "id": 56,
+        "title": "prijam mens",
+        "price":449,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/109203/280/1/150594066-109203055-1662587715.jpg"
+
+    },{
+        "id": 57,
+        "title": "women's festival",
+        "price":749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/106466/280/1/149601822-106466115-1589557907.jpg"
+
+    },{
+        "id": 58,
+        "title": "fashion saree",
+        "price":1749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/70474/280/1/127966229-70474884-1664737508.jpg"
+
+    },{
+        "id": 59,
+        "title": "kurti",
+        "price":749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/113801/280/1/152215726-113801057-1619165240.jpg"
+
+    },{
+        "id": 60,
+        "title": "Saree",
+        "price":1749,
+
+        "category": "festival",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/24862/280/1/81450598-24862939-1655563991.jpg"
+
+    },{
+        "id": 61,
+        "title": "earing",
+        "price":1749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/109493/280/1/150656413-109493796-1599499064.jpg"
+
+    },{
+        "id": 62,
+        "title": "t-shirt",
+        "price":1549,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/114890/280/1/152586961-114890326-1627995076.jpg"
+
+    },{
+        "id": 63,
+        "title": "multipurpose",
+        "price":1749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/73888/280/1/130508329-73888048-1665404618.jpg"
+
+    },{
+        "id": 64,
+        "title": "SvB saree",
+        "price":1749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/81690/280/1/135738546-81690165-1662586229.jpg"
+
+    },{
+        "id": 65,
+        "title": "shoes",
+        "price":1749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/56671/280/1/105975978-56671977-1665757406.jpg"
+
+    },{
+        "id": 66,
+        "title": "art",
+        "price":1749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/103677/280/1/148314851-103677122-1665757691.jpg"
+
+    },{
+        "id": 67,
+        "title": "WAtch",
+        "price":1749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/113854/280/1/152233250-113854345-1655809826.jpg"
+
+    },{
+        "id": 68,
+        "title": " frok",
+        "price":1749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/104548/280/1/148839517-104548355-1655901652.jpg"
+
+    },{
+        "id": 69,
+        "title": " shirt",
+        "price":1749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/114621/200/200/152497670-114621560-1625832145.jpg"
+
+    },{
+        "id": 70,
+        "title": "Pocket",
+        "price":1749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/115808/200/200/152878340-115808533-1668506624.jpg"
+
+    },{
+        "id": 71,
+        "title": "brad glass",
+        "price":1749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/101449/200/200/146972107-101449020-1664652884.jpg"
+
+    },{
+        "id": 72,
+        "title": "pocketster",
+        "price":174,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/114233/200/200/152310615-114233377-1668507492.jpg"
+
+    },{
+        "id": 73,
+        "title": "Milton viva",
+        "price":149,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/108188/280/1/150221001-108188682-1593164939.jpg"
+
+    },{
+        "id": 74,
+        "title": "Milton",
+        "price":749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/116376/280/1/153080021-116376898-1656592904.jpg"
+
+    },{
+        "id": 75,
+        "title": "melton ss500",
+        "price":749,
+
+        "category": "brand",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/109487/280/1/150653632-109487876-1663838874.jpg"
+
+    },
+    {
+        "id": 76,
+        "title": "Abs wheel",
+        "price":225,
+
+        "category": "Sport",
+        "image":"https://cdn.shopclues.com/images1/thumbnails/103679/280/1/148315937-103679545-1671186491.jpg"
+
+    }
+]
+

@@ -1,0 +1,113 @@
+body{
+    margin:0;
+    padding:0;
+    position:relative;
+}
+/* css for navbar */
+#nav{
+    /* border:solid red; */
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* position:fixed; */
+
+}
+#nav>a>img{
+    height:80px;
+    /* width:200px; */
+}
+#nav>form{
+    /* border :1px solid blue; */
+    height:50px;
+    width:60%;
+    display:flex;
+    align-items: center;
+    
+}
+#nav>form>div{
+    border-top-left-radius:10px ;
+    border-bottom-left-radius:10px ;
+
+    padding-left: 10px;
+    height:40px;
+    background-color: #E9F6F7;
+    display:flex;
+    align-items: center;
+
+}
+#nav>form>input{
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:10px ;
+
+    padding-left: 10px;
+    border:none;
+    background-color: #E9F6F7;
+    width:80%;
+    height:40px;
+    color:gray;
+    font-size: 20px;
+}
+#nav>form>button{
+    border:none;
+    color:white;
+    background-color: rgb(243, 82, 24);
+    border-radius: 10px;
+    font-size: 20px;
+    width:15%;
+    height:40px;
+}
+#nav>div{
+    /* border:2px solid; */
+    width:20%;
+    height:50px;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+#nav>div>a{
+    font-size: 25px;
+    color:darkcyan;
+}
+#cart-container{
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns:23% 23% 23% 23% ;
+    grid-gap: 20px;
+    /* margin: auto; */
+    justify-content: center;
+  }
+  #cart-container>div{
+    /* border: 2px solid red; */
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+  }
+  #cart-container>div>img{
+    height: 200px;
+    /* width: 70%; */
+
+  }
+  #cart-container>div>div{
+    margin-bottom: 10px;
+  }
+  #cart-container>div>div>button{
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: orangered;
+    border: none;
+    padding:5px 10px 5px 10px;
+    color:white;
+
+  }
+  #cart-container>div>button{
+    color:white;
+    background-color: orangered;
+    padding:5px 10px 5px 10px;
+    border: none;
+
+
+  }  
+
+  
