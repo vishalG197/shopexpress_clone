@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopExpress</title>
+    <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        
+        }
+        .con{
+            /* border:1px solid red; */
+            margin:auto;
+            width:80%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display:flex;
+            /* grid-template-columns: repeat(2,1fr); */
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+
+        }
+        #offer{
+            width:40%;
+            height:100vh;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+            /* border:1px solid blue; */
+        }
+        #sign{
+            
+            width:70%;
+            /* border:1px solid ; */
+            height:100vh;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+        }
+        #offer>div{
+            margin-top:30px;
+            text-align: center;
+            color:gray;
+
+        }
+        .bar{
+            display:grid;
+            grid-template-columns: 200px 200px;
+            border-bottom: 2px;
+            gap:50px;
+
+
+        }
+        .bar>a{
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+        .div{
+            margin:auto;
+            width:80%;
+            margin-top: 30px;
+
+        }
+        #form>div{
+            /* border:1px solid red; */
+            height:20px;
+            width:70%;
+            display:flex;
+            justify-content: space-between;
+
+        }
+        #sign>h1{
+            margin-left:20px;
+            margin-bottom:20px;
+        }
+        #sign>form{
+            margin-left:20px;
+            
+        }
+        #form>input{
+            
+            color:gray;
+            font-size: 20px;
+            margin-bottom:10px;
+            width:70%;
+            height:50px;
+        }
+        #submit{
+            margin-top:20px;
+            background-color: orangered;
+            color:whitesmoke;
+            border-radius: 10px;
+            border:none;
+        }
+        #submit:hover{
+            border:2px blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+    <div id="offer">
+            <div>
+            <i  style="color:darkcyan;font-size:40px;" class="fa-solid fa-hand-holding-dollar"></i>
+
+                <h3>Loylty point</h3>
+                <p>Earn CluesBucks on prepaid orders</p>
+
+            </div>
+            <div>
+                <i style="color:darkcyan;font-size:40px;" class="fa-solid fa-circle-check"></i>
+
+                <h2>Exclusive Offers
+                </h2>
+                <p>For special offers & value deals
+                </p>
+            </div>
+            <div>
+                
+        <i  style="color:darkcyan;font-size:40px;" class="fa-solid fa-cart-shopping"></i>
+        <h2>Instant Checkout</h2>
+        <p>Hassle-Free Payment Everytime</p>
+
+        </div>
+    </div>
+    <div id="sign">
+        <div class="bar">
+            <a href="./signin.html"> For User </a>
+            <a href="./Admin.html">For Admin</a>
+        </div>
+        <div class="div">
+        <h1 >Admin Details</h1>
+        <form id="form">
+            <h4>Full Name</h4>
+            <input type="text" placeholder="Enter your name">
+            <h4>Email</h4>
+          <input type="email" id="email" placeholder="Enter Your Email" />
+          <h4>Password</h4>
+          <input type="password" id="password" placeholder="Password"/>
+
+          <input style="color:white" id="submit" type="submit" value="Submit" />
+        </form>
+    </div>
+    </div>
+</div>
+</body>
+<script>
+     document.querySelector("form").addEventListener("submit",register);
+    function register(){
+    //   event.preventDefault();
+      inputName=form.name.value;
+      inputEmail=form.email.value;
+      inputPass=form.password.value;
+      let objdata={
+        Name:inputName,
+        Email:inputEmail,
+        Password:inputPass
+      }
+       console.log(objdata);
+      User=JSON.parse(localStorage.getItem("admin-data"))||[];
+      User.push(objdata);
+      localStorage.setItem("admin-data",JSON.stringify(User));
+     alert("Registration sucessfull");
+    }
+</script>
+</html>
