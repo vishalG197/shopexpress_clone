@@ -1,10 +1,11 @@
 body{
     margin:0;
     padding:0;
-    position:relative;
+    /* position:relative; */
 }
 /* css for navbar */
 #nav{
+
     /* border:solid red; */
     width:100%;
     display:flex;
@@ -12,6 +13,10 @@ body{
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     /* position:fixed; */
+    /* position:sticky;
+    top:1px;
+     */
+
 
 }
 #nav>img{
@@ -75,6 +80,8 @@ body{
 .footer{
     /* border:1px solid red; */
     margin-top: 40px;
+
+    
     
 }
 
