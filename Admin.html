@@ -15,9 +15,9 @@
         .con{
             /* border:1px solid red; */
             margin:auto;
-            width:80%;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            width:100%;
+            /* margin-top: 20px; */
+            /* margin-bottom: 20px; */
             display:flex;
             /* grid-template-columns: repeat(2,1fr); */
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -25,7 +25,7 @@
 
         }
         #offer{
-            width:40%;
+            width:50%;
             height:100vh;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
@@ -40,14 +40,15 @@
 
         }
         #offer>div{
-            margin-top:30px;
+            margin-top:50px;
             text-align: center;
             color:gray;
 
         }
         .bar{
+            margin-top: 20px;
             display:grid;
-            grid-template-columns: 200px 200px;
+            grid-template-columns: 150px 150px 150px;
             border-bottom: 2px;
             gap:50px;
 
@@ -129,6 +130,8 @@
         <div class="bar">
             <a href="./signin.html"> For User </a>
             <a href="./Admin.html">For Admin</a>
+            <a href="./index.html">Home</a>
+
         </div>
         <div class="div">
         <h1 >Only For The Admin</h1>
@@ -148,7 +151,8 @@
 </div>
 </body>
 <script>
-        document.querySelector("form")
+//       
+document.querySelector("form")
     .addEventListener("submit",result);
     function result(){
       event.preventDefault();
@@ -158,25 +162,28 @@
         // name:form.name.value,
         signid:inid.value,signpass:inpass.value,
       }
-      let Userdata=JSON.parse(localStorage.getItem("admin-data"))||[];
-     let n=Userdata.length;
+      console.log(data)
+
+      let Udata=JSON.parse(localStorage.getItem("admin-data"))||[];
+     let n=Udata.length;
+     console.log(Udata);
        let Usersignin=JSON.parse(localStorage.getItem("adminsighin"))||[];
       Usersignin.push(data);
-      localStorage.setItem("adminsighin",JSON.stringify(Usersignin));
       let m=Usersignin.length;
-        //console.log(signin[m-1].signpass,account[n-1].pass);
-
-        if(Userdata[n-1].Name===Usersignin[m-1].signid&&Userdata[n-1].Password===Usersignin[m-1].signpass){
-
+        console.log(data.signid,Udata[n-1].Name);
+for(let i=0;i<n;i++)
+        if(Udata[n-1].Email===data.signid&&Udata[n-1].Password===Usersignin[m-1].signpass){
+           
        alert("Sign in Successful");
-       let home=document.createElement("a");
-       a.href="./index.html";
-       opener("./index.html")
+       location.href="adminUse.html"
+
 
        }else {
         alert("Wrong Credentials");
        }
+  localStorage.setItem("adminsighin",JSON.stringify(Usersignin));
       
   }
+
 </script>
 </html>
