@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shopping Express</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="./product.css">
 
@@ -16,51 +18,92 @@
             <div>
             <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <input type="text" placeholder="What is on your mind today?">
-            <button>Search</button>
+            <input type="text" id="S" placeholder="What is on your mind today?">
+            <button id="btn">Search</button>
         </form>
         <div id="anchore">
-        <a href=""><i class="fa-regular fa-bell"></i></a>
+        <!-- <a href=""><i class="fa-regular fa-bell"></i></a> -->
         <a href="./cart.html"><i class="fa-regular fa-heart"></i></a>
         <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
         <a href="./signin.html">Sign in</a>
         </div>
     </div>
     <div>
-        <select name="sort by" id="sorting">
-            <option value="All">Sort by</option>
+        <select name="sort by price" id="sorting">
+            <option value="All">Sort by price</option>
             <option value="incresing">low to high</option>
             <option value="decresing">high to low</option>
-            <option value="below">price below Rs500</option>
-            <option value="above">price above Rs500</option>
+            <!-- <option value="below">price below Rs500</option>
+            <option value="above">price above Rs500</option> -->
         </select>
     </div>
     <div id="product-container">
         <!-- append product here  -->
     </div>
 </body>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 <script>
+  
+
 
     async function Data(){
         try{
             let res1= await fetch("./Data.json");
             res1= await res1.json();
             console.log(res1);
+        //     res1.sort((a,b)=>{
+        //   return b.price-a.price;
+        // })
+         Sort(res1);
+        
 
-            DisplayProduct(res1);
+    
+            //  DisplayProduct(res);
         }catch{
             console.log("error");
         }
     }
     // fetchedData();
     Data();
+    // console.log(sorting.value)
+    let sorting=document.getElementById("sorting"); 
 
+    sorting.addEventListener("change",()=>{
+      // event.preventDefault();
+      Data();
+    })
+    function Sort(arr){
+      sortingby=sorting.value;
+      if(sortingby==="All"){
+        // DisplayProduct(arr);
+        
+      }else if(sortingby==="incresing"){
+        arr=arr.sort((a,b)=>{
+          return a.price-b.price;
+        });
+        // console.log(arr);
+        DisplayProduct(arr);
+      }else if(sortingby==="decresing"){
+       arr= arr.sort((a,b)=>{
+          return b.price-a.price;
+        });
+        // console.log(arr);
+        DisplayProduct(arr);
+
+      }
+    }
+
+
+// console.log(res);
     let productArr=JSON.parse(localStorage.getItem("product"))||[];
-    console.log(productArr);
+    // console.log(productArr);
     let Container=document.getElementById("product-container")
-    function DisplayProduct(data){
+    function DisplayProduct(arr){
+  
+
       Container.innerHTML=""
-        data.forEach((product)=>{
+        arr.forEach((product)=>{
             let card=document.createElement("div")
             let image=document.createElement("img")
             let title=document.createElement("p");
@@ -97,6 +140,44 @@
         }
         return false
    }
-          
+   let searchtitle =document.getElementById("S").value;
+
+  let fetchedData=[];
+        fetch("./Data.json")
+        .then((request)=>{
+            return request.json();
+        })
+        .then((data)=>{
+            fetchedData=data;
+
+
+        DisplayProduct(data);
+            
+           console.log(data); 
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    
+    let search=document.querySelector("form");
+   
+        search.addEventListener("submit", (e) => {
+          e.preventDefault();
+          Search(fetchedData);
+
+        });   
+        function Search(Data){
+          let searchtitle =document.getElementById("S").value;
+console.log(searchtitle);
+    
+           let filtered = Data.filter(function(el) {
+            if (el.title.toUpperCase().includes(searchtitle.toUpperCase())===true||el.title.toLowerCase().includes(searchtitle.toLowerCase())===true) {
+              return true;
+            } else {
+              return false;
+            }
+          });
+        DisplayProduct(filtered);
+        }    
 </script>
 </html>
