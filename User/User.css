@@ -77,6 +77,19 @@ body{
     font-size: 25px;
     color:darkcyan;
 }
+.searchdata{
+    height:50px;
+background-color: darkcyan;
+
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+.searchdata>a{
+    color:white;
+    font-size: 15px;
+    border-bottom: none;
+}
 
 /* css for footer */
 .footer{

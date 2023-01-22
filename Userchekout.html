@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopExpress</title>
+    <style>
+        .add{
+            display:grid;
+            grid-template-columns: 300px 700px;
+        }
+        .add>input{
+            border:none;
+            padding-left: 10px;
+    
+            border-bottom:  solid;
+            
+        }
+        .add>input::placeholder{
+            align-self:bottom ;
+        }
+        button{
+            margin-left: 300px;
+            margin-top: 50px;
+            background-color: orangered;
+            color:white;
+            padding:10px 10px 10px 10px;
+            font-size: 25px;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="check">
+        <a href="./User.html">Back</a>
+        <h1>Edit Address</h1>
+        <div class="add">
+        <h3>Name:-</h3>
+        <input type="text" placeholder="Name" id="Name">
+        <h3>Contact Details:-</h3>
+        <input type="number" placeholder="mobile number" id="Mob">
+        <h3>Pincode:-</h3>
+        <input type="number" placeholder="pincode" id="Pin">
+        <h3>District:-</h3>
+        <input type="text" placeholder="city" id="City">
+        <h3>current Address:-</h3>
+        <input type="text" placeholder="address" id="address">
+        <h3>State:-</h3>
+        <input type="text" placeholder="state" id="State">
+        </div>
+        <!-- <input type="submit" placeholder="Placeorder" id="sub">
+         -->
+         <button>Pay & place order</button>
+</form>
+</body>
+<script>
+    order=JSON.parse(localStorage.getItem("order"))||[];
+    Placedorder=document.querySelector("#check");
+    Placedorder.addEventListener("submit", placed);
+    function placed(){
+        event.preventDefault();
+        Name=document.getElementById("Name");
+        Mob=document.getElementById("Mob");
+        Pin=document.getElementById("Pin");
+        city=document.getElementById("City");
+        address=document.getElementById("address");
+        State=document.getElementById("State");
+    obj={
+        name:Name.value,
+        mob:Mob.value,
+        pin:Pin.value,
+        city:city.value,
+        address:address.value,
+        state:State.value
+    }
+    order.push(obj);
+    localStorage.setItem("order",JSON.stringify(order));
+    prompt("Pay Here");
+    alert("payment successful and all details send to your contact");
+    location.href="./Usercart.html"
+    console.log(order);
+    }
+</script>
+</html>

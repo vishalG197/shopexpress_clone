@@ -56,3 +56,10 @@ console.log(total.innerText)
 
     }
     DisplayProduct();
+    document.getElementById("buy").addEventListener("click",()=>{
+      if (window.confirm("You have to signin first")) {
+        // window.open("sign.html", "Go for signin!");
+        location.href="signin.html";
+      }
+
+    })
