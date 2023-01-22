@@ -96,6 +96,8 @@ body{
     margin-left: 10px;
     margin-right: 10px;
     background-color: orangered;
+    border-radius: 10px;
+
     border: none;
     padding:5px 10px 5px 10px;
     color:white;
@@ -104,10 +106,25 @@ body{
   #cart-container>div>button{
     color:white;
     background-color: orangered;
+    border-radius: 10px;
+
     padding:5px 10px 5px 10px;
     border: none;
 
 
+  }
+  #buyall{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }  
+  #buy{
+    color:white;
+    background-color: orangered;
+    border-radius: 10px;
+    margin-right:50px ;
+    padding:10px 20px 10px 20px;
+    border: none;
+  }
 
   
