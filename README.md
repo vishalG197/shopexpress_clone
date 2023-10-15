@@ -35,7 +35,8 @@ HOW TO GO THROUGH THE PROJECT -
 
 ## Admin Page
 
-<img width="960" alt="image" src="https://github.com/vishalG197/shopexpress_clone/assets/119415070/e8dcd9e1-5601-497d-b4e9-bdec2fd5b1c2">
+<img width="960" alt="image" src="https://github.com/vishalG197/shopexpress_clone/assets/119415070/5572869f-7bdb-4c65-b039-5e62e81234a6">
+
 
 This E-Commerce website specializes in selling grocery products for kitchens & gadgets. The website provides 16,000 products of different products.
 
