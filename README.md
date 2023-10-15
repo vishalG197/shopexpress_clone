@@ -35,7 +35,8 @@ HOW TO GO THROUGH THE PROJECT -
 
 ## Admin Page
 
-<img width="960" alt="image" src="https://github.com/vishalG197/shopexpress_clone/assets/119415070/eeae0f90-69a0-401e-be49-bc5bd42400c1">
+
+<img width="960" alt="image" src="https://github.com/vishalG197/shopexpress_clone/assets/119415070/3ace1af6-2696-4bc8-bbcf-0760b70b1574">
 
 
 
