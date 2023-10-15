@@ -13,7 +13,7 @@ HOW TO GO THROUGH THE PROJECT -
 - First, visit the link that shows you the landing page.
 - click on see more, on clicking that it redirects to the product page
 - add the product to the card and go to the card page. click on the buy now
-- you have to register and log in after that click on the buy now, and it redirects you to the checkout page
+- you have to register and login after that click on the buy now, and it redirects you to the checkout page
 - 
 
 
