@@ -30,7 +30,7 @@ HOW TO GO THROUGH THE PROJECT -
 
 <img width="960" alt="Screenshot 2023-10-15 104234" src="https://github.com/vishalG197/shopexpress_clone/assets/119415070/5341409b-123c-4871-b265-518d2ecf2053">
 
-##Sing in and log in Page
+## Sing in and log in Page
 <img width="960" alt="Screenshot 2023-10-15 104245" src="https://github.com/vishalG197/shopexpress_clone/assets/119415070/eb71b2c9-81a1-4dc6-a907-8dc0e9c3ab1e">
 
 ## Admin Page
