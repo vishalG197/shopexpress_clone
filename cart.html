@@ -2,39 +2,278 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Express</title>
-    <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./cart/cart.css">
+    <title>Shopping Cart - ShopExpress</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .cart-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .cart-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .cart-header h1 {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .cart-items {
+            background: var(--white);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 100px 1fr auto;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--light-gray);
+            align-items: center;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-image {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 0.5rem;
+        }
+
+        .item-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .item-price {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quantity-btn {
+            background: var(--light-gray);
+            border: none;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .quantity-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .remove-btn {
+            color: #ef4444;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .remove-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .cart-summary {
+            margin-top: 2rem;
+            background: var(--white);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 1.5rem;
+        }
+
+        .checkout-btn:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 3rem;
+            background: var(--white);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            display: none;
+        }
+
+        .empty-cart i {
+            font-size: 4rem;
+            color: var(--light-gray);
+            margin-bottom: 1rem;
+        }
+
+        .empty-cart h2 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .continue-shopping {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .continue-shopping:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .cart-item {
+                grid-template-columns: 80px 1fr;
+                gap: 1rem;
+            }
+
+            .item-image {
+                width: 80px;
+                height: 80px;
+            }
+
+            .quantity-control {
+                grid-column: 1 / -1;
+                justify-content: center;
+            }
+        }
+
+        #user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        #user-name {
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        #logout-btn {
+            color: #ef4444;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            transition: all 0.3s ease;
+        }
+
+        #logout-btn:hover {
+            background-color: #fee2e2;
+        }
+    </style>
 </head>
 <body>
     <div id="nav">
-        <a href="./index.html"><img src="./images/project logo.png" alt="logo"></a>
+        <img src="./images/project logo.png" alt="logo">
         <form id="form">
             <div>
-            <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <input type="text" placeholder="What is on your mind today?">
+            <input type="text" id="S" placeholder="What is on your mind today?">
             <button>Search</button>
         </form>
         <div id="anchore">
-        <a href=""><i class="fa-regular fa-bell"></i></a>
-        <a href="./cart.html"><i class="fa-regular fa-heart"></i></a>
-        <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-        <a href="./signin.html">Sign in</a>
+            <a href=""><i class="fa-regular fa-bell"></i></a>
+            <a href="./cart.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div id="user-info">
+                <span id="user-name"></span>
+                <a href="#" id="logout-btn" style="display: none;">Logout</a>
+                <a href="./signin.html" id="signin-link" style="display: none;">Sign in</a>
+            </div>
         </div>
-    </div> 
-    <div id="buyall">
-    <h1 id="total">
-        Your Total cart Price is:- Rs <span id="cart-total">0</span> only.
-      </h1>
-      <button id="buy">buy now</button>
-      </div>
-    <div id="cart-container">
+    </div>
 
-        <!-- append data here  -->
-    </div> 
+    <div class="cart-container">
+        <div class="cart-header">
+            <h1>Your Shopping Cart</h1>
+        </div>
+
+        <div class="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+
+        <div class="empty-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <h2>Your cart is empty</h2>
+            <p>Looks like you haven't added any items to your cart yet.</p>
+            <a href="index.html" class="continue-shopping">Continue Shopping</a>
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span>₹<span id="cart-total">0</span></span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span>Free</span>
+            </div>
+            <div class="summary-row">
+                <span>Total</span>
+                <span>₹<span id="cart-total">0</span></span>
+            </div>
+            <button id="buy" class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="cart/cart.js"></script>
 </body>
-<script src="./cart/cart.js"></script>
 </html>

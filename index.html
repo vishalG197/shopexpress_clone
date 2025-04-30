@@ -18,9 +18,13 @@
         </form>
         <div id="anchore">
         <a href=""><i class="fa-regular fa-bell"></i></a>
-        <a href="./cart.html"><i class="fa-regular fa-heart"></i></a>
-        <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-        <a href="./signin.html">Sign in</a>
+        <a href="./Usercart.html"><i class="fa-regular fa-heart"></i></a>
+        <a href="./Usercart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <div id="user-info">
+            <span id="user-name"></span>
+            <a href="#" id="logout-btn" style="display: none;">Logout</a>
+            <a href="./signin.html" id="signin-link" style="display: none;">Sign in</a>
+        </div>
         </div>
         </div>
         <div class="searchdata">
@@ -443,5 +447,58 @@
 </body>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="./index.js" ></script>
+
+<style>
+    #user-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #user-name {
+        color: #2563eb;
+        font-weight: 500;
+    }
+
+    #logout-btn {
+        color: #ef4444;
+        text-decoration: none;
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        transition: all 0.3s ease;
+    }
+
+    #logout-btn:hover {
+        background-color: #fee2e2;
+    }
+</style>
+
+<script>
+    // Check user login status
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        const userNameElement = document.getElementById('user-name');
+        const logoutBtn = document.getElementById('logout-btn');
+        const signinLink = document.getElementById('signin-link');
+
+        if (currentUser) {
+            userNameElement.textContent = currentUser.name;
+            logoutBtn.style.display = 'block';
+            signinLink.style.display = 'none';
+        } else {
+            userNameElement.textContent = '';
+            logoutBtn.style.display = 'none';
+            signinLink.style.display = 'block';
+        }
+
+        // Handle logout
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('currentUser');
+            window.location.reload();
+        });
+    });
+</script>
 
 </html>

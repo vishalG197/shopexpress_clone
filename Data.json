@@ -24,15 +24,7 @@
         "category":"Daily Essential",
         "image": "https://cdn.shopclues.com/images1/thumbnails/116240/280/1/153045770-116240720-1649410479.jpg"
 
-    },    {
-        "id": 4,
-        "title": "Auth",
-        "price": 1947,
-
-        "category":"Daily Essential",
-        "image": "https://cdn.shopclues.com/images1/thumbnails/113420/280/1/152087676-113420666-1615534234.jpg"
-
-    },    {
+    },      {
         "id": 5,
         "title": "Everyday",
         "price":749,
@@ -64,23 +56,7 @@
         "category":"Daily Essential",
         "image": "https://cdn.shopclues.com/images1/thumbnails/115716/280/1/152843784-115716548-1636379288.jpg"
 
-    },    {
-        "id": 9,
-        "title": "Desi Khand",
-        "price": 198,
-
-        "category":"Daily Essential",
-        "image": "https://cdn.shopclues.com/images1/thumbnails/116333/280/1/153072854-116333519-1654504380.jpg"
-
-    },    {
-        "id": 10,
-        "title": "Organic Jaggery",
-        "price": 198,
-
-        "category":"Daily Essential",
-        "image": "https://cdn.shopclues.com/images1/thumbnails/116333/280/1/153072855-116333520-1654504394.jpg"
-
-    },    {
+    },     {
         "id": 11,
         "title": "Shakkar",
         "price": 295,
@@ -96,31 +72,7 @@
         "category":"Daily Essential",
         "image": "https://cdn.shopclues.com/images1/thumbnails/116083/280/1/152983036-116083584-1645780592.jpg"
 
-    },    {
-        "id": 13,
-        "title": "PURE oil",
-        "price": 350,
-
-        "category":"Daily Essential",
-        "image": "https://cdn.shopclues.com/images1/thumbnails/116386/280/1/153082666-116386526-1655992726.jpg"
-
-    },    {
-        "id": 14,
-        "title": "oil",
-        "price": 499,
-
-        "category":"Daily Essential",
-        "image": "https://cdn.shopclues.com/images1/thumbnails/91561/280/1/140433582-91561309-1611140007.jpg"
-
-    },    {
-        "id": 15,
-        "title": "Pam canola cooking",
-        "price":725,
-
-        "category":"Daily Essential",
-        "image": "https://cdn.shopclues.com/images/thumbnails/80150/280/1/12487898881YQKoYxAGL1502473426.jpg"
-
-    },
+    },   
    
     {
         "id": 16,
@@ -185,22 +137,6 @@
 
         "category": "Sport",
         "image":"https://cdn.shopclues.com/images1/thumbnails/48246/280/1/118746101-48246979-1662567622.jpg"
-
-    },{
-        "id": 26,
-        "title": "guard",
-        "price":725,
-
-        "category": "Sport",
-        "image":"https://cdn.shopclues.com/images1/thumbnails/15103/280/1/97778673-15103542-1673510899.jpg"
-
-    },{
-        "id": 27,
-        "title": "badminton",
-        "price":425,
-
-        "category": "Sport",
-        "image":"https://cdn.shopclues.com/images1/thumbnails/20824/280/1/89096665-20824680-1655210934.jpg"
 
     },{
         "id": 28,
@@ -372,22 +308,6 @@
         "image":"https://cdn.shopclues.com/images1/thumbnails/74107/280/1/130624146-74107836-1662589603.jpg"
 
     },{
-        "id": 49,
-        "title": "teal chair",
-        "price":8749,
-
-        "category": "festival",
-        "image":"https://cdn.shopclues.com/images1/thumbnails/113810/280/1/152220086-113810385-1619445139.jpg"
-
-    },{
-        "id": 50,
-        "title": "manuel recleaner",
-        "price":22749,
-
-        "category": "festival",
-        "image":"https://cdn.shopclues.com/images1/thumbnails/30307/280/1/105803872-30307576-1672997059.jpg"
-
-    },{
         "id": 51,
         "title": "blue were",
         "price":1749,
@@ -468,28 +388,12 @@
         "image":"https://cdn.shopclues.com/images1/thumbnails/24862/280/1/81450598-24862939-1655563991.jpg"
 
     },{
-        "id": 61,
-        "title": "earing",
-        "price":1749,
-
-        "category": "brand",
-        "image":"https://cdn.shopclues.com/images1/thumbnails/109493/280/1/150656413-109493796-1599499064.jpg"
-
-    },{
         "id": 62,
         "title": "t-shirt",
         "price":1549,
 
         "category": "brand",
         "image":"https://cdn.shopclues.com/images1/thumbnails/114890/280/1/152586961-114890326-1627995076.jpg"
-
-    },{
-        "id": 63,
-        "title": "multipurpose",
-        "price":1749,
-
-        "category": "brand",
-        "image":"https://cdn.shopclues.com/images1/thumbnails/73888/280/1/130508329-73888048-1665404618.jpg"
 
     },{
         "id": 64,

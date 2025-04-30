@@ -4,28 +4,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shopping Express</title>
+    <title>Products - ShopExpress</title>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
     <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="./product.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1d4ed8;
+            --accent-color: #ea580c;
+            --text-color: #1f2937;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --transition: all 0.3s ease;
+        }
 
+        #nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow-sm);
+        }
+
+        #nav img {
+            height: 40px;
+            width: auto;
+        }
+
+        #form {
+            flex: 1;
+            max-width: 600px;
+            margin: 0 2rem;
+            display: flex;
+            align-items: center;
+            background: var(--light-gray);
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            transition: var(--transition);
+        }
+
+        #form:focus-within {
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        #form div {
+            color: #6b7280;
+            margin-right: 0.5rem;
+        }
+
+        #form input {
+            flex: 1;
+            border: none;
+            background: none;
+            padding: 0.5rem;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        #form button {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        #form button:hover {
+            background: var(--secondary-color);
+        }
+
+        #anchore {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        #anchore a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        #anchore a:hover {
+            color: var(--primary-color);
+        }
+
+        #user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        #user-name {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        #logout-btn {
+            color: #ef4444;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            transition: var(--transition);
+        }
+
+        #logout-btn:hover {
+            background-color: #fee2e2;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--accent-color);
+            color: var(--white);
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 1rem;
+            min-width: 1.5rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            #nav {
+                padding: 1rem;
+            }
+
+            #form {
+                margin: 0 1rem;
+            }
+
+            #anchore {
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="nav">
         <a href="./index.html"><img src="./images/project logo.png" alt="logo"></a>
         <form id="form">
             <div>
-            <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <input type="text" id="S" placeholder="What is on your mind today?">
             <button id="btn">Search</button>
         </form>
         <div id="anchore">
-        <a href=""><i class="fa-regular fa-bell"></i></a>
-        <a href="./cart.html"><i class="fa-regular fa-heart"></i></a>
-        <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-        <a href="./signin.html">Sign in</a>
+            <a href=""><i class="fa-regular fa-bell"></i></a>
+            <a href="./Usercart.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="./Usercart.html" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </a>
+            <div id="user-info">
+                <span id="user-name"></span>
+                <a href="#" id="logout-btn" style="display: none;">Logout</a>
+                <a href="./signin.html" id="signin-link" style="display: none;">Sign in</a>
+            </div>
         </div>
     </div>
     <div>
@@ -44,140 +192,132 @@
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <script>
-  
-
-
+    // Initialize cart array
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
     async function Data(){
         try{
-            let res1= await fetch("./Data.json");
-            res1= await res1.json();
-            console.log(res1);
-        //     res1.sort((a,b)=>{
-        //   return b.price-a.price;
-        // })
-         Sort(res1);
-        
-
-    
-            //  DisplayProduct(res);
-        }catch{
-            console.log("error");
+            let res1 = await fetch("./Data.json");
+            res1 = await res1.json();
+            Sort(res1);
+        } catch(err) {
+            console.log("Error fetching data:", err);
         }
     }
-    // fetchedData();
+
     Data();
-    // console.log(sorting.value)
-    let sorting=document.getElementById("sorting"); 
 
-    sorting.addEventListener("change",()=>{
-      // event.preventDefault();
-      Data();
-    })
-    function Sort(arr){
-      sortingby=sorting.value;
-      if(sortingby==="All"){
-        // DisplayProduct(arr);
-        
-      }else if(sortingby==="incresing"){
-        arr=arr.sort((a,b)=>{
-          return a.price-b.price;
-        });
-        // console.log(arr);
-        DisplayProduct(arr);
-      }else if(sortingby==="decresing"){
-       arr= arr.sort((a,b)=>{
-          return b.price-a.price;
-        });
-        // console.log(arr);
-        DisplayProduct(arr);
+    let sorting = document.getElementById("sorting"); 
+    sorting.addEventListener("change", () => {
+        Data();
+    });
 
-      }
-    }
-
-
-// console.log(res);
-    let productArr=JSON.parse(localStorage.getItem("product"))||[];
-    // console.log(productArr);
-    let Container=document.getElementById("product-container")
-    function DisplayProduct(arr){
-  
-
-      Container.innerHTML=""
-        arr.forEach((product)=>{
-            let card=document.createElement("div")
-            let image=document.createElement("img")
-            let title=document.createElement("p");
-            let price=document.createElement("h4")
-            let add_to_cart=document.createElement("button")
-              add_to_cart.textContent="Add to Cart"
-              image.src=product.image;
-             title.textContent=product.title;
-              price.textContent=`₹${product.price}`;
-            add_to_cart.addEventListener("click",()=>{
-                 
-                if(checkDuplicate(product)){
-                  alert("Product Already in Cart")
-                }else{
-                  productArr.push({...product,quantity:1})
-                  localStorage.setItem("product",JSON.stringify(productArr))
-                  alert("Product Added To Cart")
-
-                }
-            })
-              card.append(image,title,price,add_to_cart)
-              Container.append(card)
-        })
-
-
-
-
-    }
-    function  checkDuplicate(product){
-        for(let i=0;i<productArr.length;i++){
-          if(productArr[i].id===product.id){
-            return true
-          }
+    function Sort(arr) {
+        let sortingby = sorting.value;
+        if (sortingby === "All") {
+            DisplayProduct(arr);
+        } else if (sortingby === "incresing") {
+            arr = arr.sort((a,b) => a.price - b.price);
+            DisplayProduct(arr);
+        } else if (sortingby === "decresing") {
+            arr = arr.sort((a,b) => b.price - a.price);
+            DisplayProduct(arr);
         }
-        return false
-   }
-   let searchtitle =document.getElementById("S").value;
+    }
 
-  let fetchedData=[];
-        fetch("./Data.json")
-        .then((request)=>{
-            return request.json();
-        })
-        .then((data)=>{
-            fetchedData=data;
-
-
-        DisplayProduct(data);
+    let Container = document.getElementById("product-container");
+    function DisplayProduct(arr) {
+        Container.innerHTML = "";
+        arr.forEach((product) => {
+            let card = document.createElement("div");
+            let image = document.createElement("img");
+            let title = document.createElement("p");
+            let price = document.createElement("h4");
+            let add_to_cart = document.createElement("button");
             
-           console.log(data); 
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
-    
-    let search=document.querySelector("form");
-   
-        search.addEventListener("submit", (e) => {
-          e.preventDefault();
-          Search(fetchedData);
+            add_to_cart.textContent = "Add to Cart";
+            image.src = product.image;
+            title.textContent = product.title;
+            price.textContent = `₹${product.price}`;
+            
+            add_to_cart.addEventListener("click", () => {
+                if (checkDuplicate(product)) {
+                    alert("Product Already in Cart");
+                } else {
+                    cart.push({...product, quantity: 1});
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    alert("Product Added To Cart");
+                    updateCartCount(); // Update cart count after adding item
+                }
+            });
+            
+            card.append(image, title, price, add_to_cart);
+            Container.append(card);
+        });
+    }
 
-        });   
-        function Search(Data){
-          let searchtitle =document.getElementById("S").value;
-console.log(searchtitle);
-    
-           let filtered = Data.filter(function(el) {
-            if (el.title.toUpperCase().includes(searchtitle.toUpperCase())===true||el.title.toLowerCase().includes(searchtitle.toLowerCase())===true) {
-              return true;
-            } else {
-              return false;
-            }
-          });
+    function checkDuplicate(product) {
+        return cart.some(item => item.id === product.id);
+    }
+
+    let fetchedData = [];
+    fetch("./Data.json")
+        .then((request) => request.json())
+        .then((data) => {
+            fetchedData = data;
+            DisplayProduct(data);
+        })
+        .catch((err) => {
+            console.log("Error:", err);
+        });
+
+    let search = document.querySelector("form");
+    search.addEventListener("submit", (e) => {
+        e.preventDefault();
+        Search(fetchedData);
+    });
+
+    function Search(Data) {
+        let searchtitle = document.getElementById("S").value;
+        let filtered = Data.filter(function(el) {
+            return el.title.toLowerCase().includes(searchtitle.toLowerCase());
+        });
         DisplayProduct(filtered);
-        }    
+    }
+
+    // Update cart count
+    function updateCartCount() {
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        document.getElementById("cart-count").textContent = totalItems;
+    }
+
+    // Update user info in navbar
+    function updateUserInfo() {
+        const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        const userName = document.getElementById("user-name");
+        const logoutBtn = document.getElementById("logout-btn");
+        const signinLink = document.getElementById("signin-link");
+
+        if (currentUser) {
+            userName.textContent = currentUser.name;
+            logoutBtn.style.display = "block";
+            signinLink.style.display = "none";
+        } else {
+            userName.textContent = "";
+            logoutBtn.style.display = "none";
+            signinLink.style.display = "block";
+        }
+    }
+
+    // Handle logout
+    document.getElementById("logout-btn").addEventListener("click", (e) => {
+        e.preventDefault();
+        localStorage.removeItem("currentUser");
+        window.location.href = "index.html";
+    });
+
+    // Initialize
+    updateCartCount();
+    updateUserInfo();
 </script>
 </html>

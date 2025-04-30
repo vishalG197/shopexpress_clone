@@ -4,170 +4,362 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopExpress</title>
+    <title>Register - ShopExpress</title>
     <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
     <style>
-        body{
-            margin:0;
-            padding:0;
-        
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1d4ed8;
+            --accent-color: #ea580c;
+            --text-color: #1f2937;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --transition: all 0.3s ease;
         }
-        .con{
-            /* border:1px solid red; */
-            margin:auto;
-            width:100%;
-            /* margin-top: 20px; */
-            /* margin-bottom: 20px; */
-            display:flex;
-            /* grid-template-columns: repeat(2,1fr); */
-            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
-
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
         }
-        #offer{
-            width:50%;
-            height:100vh;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
-            /* border:1px solid blue; */
+        body {
+            background-color: var(--light-gray);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        #sign{
-            
-            width:70%;
-            /* border:1px solid ; */
-            height:100vh;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
+        .register-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1200px;
+            width: 90%;
+            background: var(--white);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
         }
-        #offer>div{
-            margin-top:50px;
+
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 3rem;
+            color: var(--white);
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .benefit-item i {
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        .benefit-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-content p {
+            opacity: 0.9;
+        }
+
+        .register-section {
+            padding: 3rem;
+        }
+
+        .register-header {
             text-align: center;
-            color:gray;
-
+            margin-bottom: 2rem;
         }
-        .bar{
-            margin-top: 20px;
-            display:grid;
-            grid-template-columns: 150px 150px 150px;
-            border-bottom: 2px;
-            gap:50px;
 
+        .register-header h1 {
+            color: var(--text-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
 
+        .register-header p {
+            color: #6b7280;
         }
-        .bar>a{
-            margin-left: 50px;
-            margin-top: 10px;
-        }
-        .div{
-            margin:auto;
-            width:80%;
-            margin-top: 30px;
 
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
-        #form>div{
-            /* border:1px solid red; */
-            height:20px;
-            width:70%;
-            display:flex;
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .nav-links a:hover {
+            background: var(--light-gray);
+        }
+
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .form-group input {
+            padding: 0.75rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-actions {
+            display: flex;
             justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
 
+        .form-actions a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
         }
-        #sign>h1{
-            margin-left:20px;
-            margin-bottom:20px;
+
+        .form-actions a:hover {
+            text-decoration: underline;
         }
-        #sign>form{
-            margin-left:20px;
-            
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
         }
-        #form>input{
-            
-            color:gray;
-            font-size: 20px;
-            margin-bottom:10px;
-            width:70%;
-            height:50px;
+
+        .submit-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
         }
-        #submit{
-            margin-top:20px;
-            background-color: orangered;
-            color:whitesmoke;
-            border-radius: 10px;
-            border:none;
+
+        .success-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
         }
-        #submit:hover{
-            border:2px blue;
+
+        .success-content {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: var(--shadow-md);
+        }
+
+        .success-content i {
+            font-size: 4rem;
+            color: #10b981;
+            margin-bottom: 1rem;
+        }
+
+        .success-content h2 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .success-content p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        .success-content button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .success-content button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .register-container {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-section {
+                display: none;
+            }
+
+            .register-section {
+                padding: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="con">
-    <div id="offer">
-            <div>
-            <i  style="color:darkcyan;font-size:40px;" class="fa-solid fa-hand-holding-dollar"></i>
-
-                <h3>Loylty point</h3>
-                <p>Earn CluesBucks on prepaid orders</p>
-
+    <div class="register-container">
+        <div class="benefits-section">
+            <div class="benefit-item">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <div class="benefit-content">
+                    <h3>Loyalty Points</h3>
+                    <p>Earn rewards on every purchase</p>
+                </div>
             </div>
-            <div>
-                <i style="color:darkcyan;font-size:40px;" class="fa-solid fa-circle-check"></i>
-
-                <h2>Exclusive Offers
-                </h2>
-                <p>For special offers & value deals
-                </p>
+            <div class="benefit-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div class="benefit-content">
+                    <h3>Exclusive Offers</h3>
+                    <p>Get access to special deals and discounts</p>
+                </div>
             </div>
-            <div>
-                
-        <i  style="color:darkcyan;font-size:40px;" class="fa-solid fa-cart-shopping"></i>
-        <h2>Instant Checkout</h2>
-        <p>Hassle-Free Payment Everytime</p>
-
+            <div class="benefit-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="benefit-content">
+                    <h3>Instant Checkout</h3>
+                    <p>Fast and secure payment processing</p>
+                </div>
+            </div>
+        </div>
+        <div class="register-section">
+            <div class="register-header">
+                <h1>Create Account</h1>
+                <p>Join ShopExpress today</p>
+            </div>
+            <div class="nav-links">
+                <a href="./signin.html">Sign In</a>
+                <a href="./Register.html" class="active">Register</a>
+                <a href="./index.html">Home</a>
+            </div>
+            <form id="form" class="register-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <div class="form-actions">
+                    <a href="./signin.html">Already have an account?</a>
+                    <a href="./signin.html">Sign In</a>
+                </div>
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
         </div>
     </div>
-    <div id="sign">
-        <div class="bar">
-            <a href="./signin.html"> For User </a>
-            <a href="./Admin.html">For Admin</a>
-            <a href="./index.html">Home</a>
 
-        </div>
-        <div class="div">
-        <h1 >Please Enter Your Details</h1>
-        <form id="form">
-            <h4>Full Name</h4>
-            <input type="text" id="name" placeholder="Enter your name">
-            <h4>Email</h4>
-          <input type="email" id="email" placeholder="Enter Your Email" />
-          <h4>Password</h4>
-          <input type="password" id="password" placeholder="Password"/>
+    <script>
+        document.querySelector("form")
+        .addEventListener("submit", result);
 
-          <input style="color:white" id="submit" type="submit" value="Submit" />
-        </form>
-    </div>
-    </div>
-</div>
+        function result(e) {
+            e.preventDefault();
+            let name = document.querySelector("#name");
+            let email = document.querySelector("#email");
+            let password = document.querySelector("#password");
+            let confirmPassword = document.querySelector("#confirm-password");
+
+            if (password.value !== confirmPassword.value) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            let data = {
+                Name: name.value,
+                Email: email.value,
+                Password: password.value
+            }
+
+            let Udata = JSON.parse(localStorage.getItem("User-data")) || [];
+            Udata.push(data);
+            localStorage.setItem("User-data", JSON.stringify(Udata));
+
+            // Show success modal
+            showSuccessModal(data.Name);
+        }
+
+        // Success Modal
+        function showSuccessModal(userName) {
+            const modal = document.createElement('div');
+            modal.className = 'success-modal';
+            modal.innerHTML = `
+                <div class="success-content">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Registration Successful!</h2>
+                    <p>Welcome to ShopExpress, ${userName}!</p>
+                    <button onclick="redirectToLogin()">Continue to Login</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function redirectToLogin() {
+            window.location.href = "signin.html";
+        }
+    </script>
 </body>
-<script>
-    document.querySelector("form").addEventListener("submit",register);
-    function register(){
-       event.preventDefault();
-      inputName=form.name.value;
-      inputEmail=form.email.value;
-      inputPass=form.password.value;
-      let objdata={
-        Name:inputName,
-        Email:inputEmail,
-        Password:inputPass
-      }
-       console.log(objdata);
-      User=JSON.parse(localStorage.getItem("User-data"))||[];
-      User.push(objdata);
-      localStorage.setItem("User-data",JSON.stringify(User));
-      alert("Registration sucessfull");
-     location.href="signin.html"
-
-    }
-</script>
 </html>
