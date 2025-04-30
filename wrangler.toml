@@ -1,0 +1,13 @@
+name = "shopexpress-clone"
+compatibility_date = "2024-04-30"
+
+[site]
+bucket = "./"
+entry-point = "index.html"
+
+[build]
+command = ""
+publish = "./"
+
+[env.production]
+workers_dev = true 
