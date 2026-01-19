@@ -1,0 +1,87 @@
+/* Footer Styles */
+.footer {
+    margin-top: var(--spacing-xl);
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    border-top: 1px solid var(--text-gray);
+    padding-bottom: var(--spacing-xl);
+}
+
+.trust-badge {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    background-color: #1f2937;
+    color: white;
+}
+
+.trust-badge h1 {
+    margin-bottom: var(--spacing-lg);
+    color: white;
+    font-weight: 700;
+}
+
+.badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.badge {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background: var(--text-dark);
+    border: 1px solid var(--text-gray);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    width: 280px;
+    transition: transform var(--transition-normal);
+}
+
+.badge:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-colored);
+    border-color: var(--primary-color);
+}
+
+.badge i {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.badge h2 {
+    color: white;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: var(--spacing-xl) auto 0;
+    padding: 0 var(--spacing-md);
+}
+
+.link-column h3 {
+    color: white;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.link-column a {
+    display: block;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    transition: color var(--transition-fast);
+}
+
+.link-column a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+    display: inline-block;
+}

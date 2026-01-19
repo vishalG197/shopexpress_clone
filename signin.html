@@ -1,257 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - ShopExpress</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/styles/variables.css">
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/navbar.css">
+    <link rel="stylesheet" href="/src/styles/auth.css">
+
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1d4ed8;
-            --accent-color: #ea580c;
-            --text-color: #1f2937;
-            --light-gray: #f3f4f6;
-            --white: #ffffff;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-
-        body {
-            background-color: var(--light-gray);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .login-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            max-width: 1200px;
-            width: 90%;
-            background: var(--white);
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-
-        .benefits-section {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 3rem;
-            color: var(--white);
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .benefit-item i {
-            font-size: 2rem;
-            color: var(--white);
-        }
-
-        .benefit-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .benefit-content p {
-            opacity: 0.9;
-        }
-
-        .login-section {
-            padding: 3rem;
-        }
-
-        .login-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .login-header h1 {
-            color: var(--text-color);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .login-header p {
-            color: #6b7280;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .nav-links a.active {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        .nav-links a:hover {
-            background: var(--light-gray);
-        }
-
-        .login-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .form-group label {
-            color: var(--text-color);
-            font-weight: 500;
-        }
-
-        .form-group input {
-            padding: 0.75rem 1rem;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        .form-actions {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1rem;
-        }
-
-        .form-actions a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .form-actions a:hover {
-            text-decoration: underline;
-        }
-
-        .submit-btn {
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .submit-btn:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        .success-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .success-content {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-            box-shadow: var(--shadow-md);
-        }
-
-        .success-content i {
-            font-size: 4rem;
-            color: #10b981;
-            margin-bottom: 1rem;
-        }
-
-        .success-content h2 {
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .success-content p {
-            color: #6b7280;
-            margin-bottom: 1.5rem;
-        }
-
-        .success-content button {
-            background-color: var(--primary-color);
-            color: var(--white);
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .success-content button:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .login-container {
-                grid-template-columns: 1fr;
-            }
-
-            .benefits-section {
-                display: none;
-            }
-
-            .login-section {
-                padding: 2rem;
-            }
-        }
-    </style>
+    <script type="module" src="/src/scripts/auth.js"></script>
 </head>
+
 <body>
+    <header id="nav">
+        <a href="/" class="logo-link">
+            <img src="/src/assets/images/project_logo.png" alt="ShopExpress Logo" class="logo-img">
+        </a>
+        <nav class="nav-links">
+            <a href="/" class="icon-btn" aria-label="Home"><i class="fa-solid fa-house"></i></a>
+        </nav>
+    </header>
+
     <div class="login-container">
         <div class="benefits-section">
             <div class="benefit-item">
@@ -276,16 +56,15 @@
                 </div>
             </div>
         </div>
-        <div class="login-section">
+
+        <main class="login-section">
             <div class="login-header">
                 <h1>Welcome Back</h1>
                 <p>Sign in to access your account</p>
             </div>
-            <div class="nav-links">
-                <a href="./signin.html" class="active">Sign In</a>
-                <a href="./Register.html">Register</a>
-                <a href="./index.html">Home</a>
-            </div>
+
+            <!-- Removed old nav -->
+
             <form id="form" class="login-form">
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -301,63 +80,8 @@
                 </div>
                 <button type="submit" class="submit-btn">Sign In</button>
             </form>
-        </div>
+        </main>
     </div>
-
-    <script>
-        document.querySelector("form")
-        .addEventListener("submit", result);
-
-        function result(e) {
-            e.preventDefault();
-            let inid = document.querySelector("#email");
-            let inpass = document.querySelector("#password");
-            let data = {
-                signid: inid.value,
-                signpass: inpass.value,
-            }
-
-            let Udata = JSON.parse(localStorage.getItem("User-data")) || [];
-            let Usersignin = JSON.parse(localStorage.getItem("Usersighin")) || [];
-            Usersignin.push(data);
-
-            // Find the matching user
-            let user = Udata.find(user => user.Email === data.signid && user.Password === data.signpass);
-            
-            if (user) {
-                // Store current user data
-                localStorage.setItem("currentUser", JSON.stringify({
-                    name: user.Name,
-                    email: user.Email
-                }));
-                
-                // Show success modal
-                showSuccessModal(user.Name);
-            } else {
-                alert("Wrong Credentials");
-            }
-            
-            localStorage.setItem("Usersighin", JSON.stringify(Usersignin));
-        }
-
-        // Success Modal
-        function showSuccessModal(userName) {
-            const modal = document.createElement('div');
-            modal.className = 'success-modal';
-            modal.innerHTML = `
-                <div class="success-content">
-                    <i class="fas fa-check-circle"></i>
-                    <h2>Login Successful!</h2>
-                    <p>Welcome back, ${userName}!</p>
-                    <button onclick="redirectToHome()">Continue Shopping</button>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-
-        function redirectToHome() {
-            window.location.href = "index.html";
-        }
-    </script>
 </body>
+
 </html>

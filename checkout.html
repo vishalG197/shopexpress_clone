@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ShopExpress</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/styles/variables.css">
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/navbar.css">
+    <link rel="stylesheet" href="/src/styles/footer.css">
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="/src/styles/checkout.css">
+    <link rel="stylesheet" href="/src/styles/notification.css">
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
+    <script type="module" src="/src/scripts/main.js"></script>
+    <script type="module" src="/src/scripts/checkout.js"></script>
+</head>
+
+<body>
+    <header id="nav">
+        <!-- Logo -->
+        <a href="/" class="logo-link">
+            <img src="/src/assets/images/project_logo.png" alt="ShopExpress Logo" class="logo-img">
+        </a>
+
+        <div class="checkout-process-indicator" style="flex-grow: 1; text-align: center; color: var(--text-gray);">
+            <i class="fa-solid fa-lock"></i> Secure Checkout
+        </div>
+    </header>
+
+    <main class="checkout-container">
+        <div class="checkout-header">
+            <h1>Checkout</h1>
+            <p>Complete your purchase with confidence</p>
+        </div>
+
+        <section class="shipping-info">
+            <h2>Shipping Information</h2>
+            <form id="checkout-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required placeholder="Enter your first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required placeholder="Enter your last name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" required placeholder="Enter your shipping address">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" required placeholder="Enter your city">
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP Code</label>
+                        <input type="text" id="zip" required placeholder="Enter ZIP code">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" required>
+                        <option value="">Select Country</option>
+                        <option value="US">United States</option>
+                        <option value="IN">India</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                    </select>
+                </div>
+
+                <div class="payment-method">
+                    <h2>Payment Method</h2>
+                    <div class="payment-options">
+                        <div class="payment-option active" data-method="credit-card">
+                            <i class="fas fa-credit-card"></i>
+                            <div>Credit Card</div>
+                        </div>
+                        <div class="payment-option" data-method="paypal">
+                            <i class="fab fa-paypal"></i>
+                            <div>PayPal</div>
+                        </div>
+                    </div>
+
+                    <!-- Credit Card Form -->
+                    <div id="credit-card-form" class="credit-card-form">
+                        <div class="form-group">
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="cardName" placeholder="e.g. John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" maxlength="19" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cardExpiry">Expiry Date</label>
+                                <input type="text" id="cardExpiry" maxlength="5" placeholder="MM/YY">
+                            </div>
+                            <div class="form-group">
+                                <label for="cardCvv">CVV</label>
+                                <input type="password" id="cardCvv" maxlength="3" placeholder="123">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-items">
+                <!-- Order items will be dynamically added here -->
+            </div>
+            <div class="summary-total">
+                <div class="total-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0.00</span>
+                </div>
+                <div class="total-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="total-row">
+                    <span>Total</span>
+                    <span id="total">₹0.00</span>
+                </div>
+            </div>
+            <button id="place-order-btn" class="place-order-btn">
+                Place Order
+            </button>
+        </section>
+    </main>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle modal-icon"></i>
+            <h2 class="modal-title">Order Placed Successfully!</h2>
+            <p class="modal-message">Thank you for your purchase. Your order has been confirmed and will be processed
+                shortly.</p>
+            <div class="modal-order-id" id="modalOrderId"></div>
+            <button class="modal-button" id="close-modal-btn">Continue Shopping</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="trust-badge">
+            <h1>Band Of Trust</h1>
+            <div class="badges">
+                <div class="badge">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h2>Great Selection</h2>
+                </div>
+                <div class="badge">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h2>Low Price</h2>
+                </div>
+                <div class="badge">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h2>Speedy Delivery</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="link-column">
+                <h3>Shopper Central</h3>
+                <a href="#">Easy Returns</a>
+                <a href="#">Sign In/Register</a>
+                <a href="#">Our Policies</a>
+                <a href="#">Payment Options</a>
+            </div>
+            <div class="link-column">
+                <h3>Merchant Central</h3>
+                <a href="#">Merchant Panel</a>
+                <a href="#">How To Sell</a>
+                <a href="#">Commission Structure</a>
+            </div>
+            <div class="link-column">
+                <h3>About Us</h3>
+                <a href="#">History</a>
+                <a href="#">Band of Trust</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="link-column">
+                <h3>Contact</h3>
+                <a href="#">Support</a>
+                <a href="#">Press</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

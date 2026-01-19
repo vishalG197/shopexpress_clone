@@ -1,207 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shopExpress</title>
-    <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
-    
-    <style>
-      body{
-    margin:0;
-    padding:0;
-    /* position:relative; */
-}
-/* css for navbar */
-#nav{
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders Dashboard - ShopExpress Admin</title>
 
-    /* border:solid red; */
-    background-color: #ffff;
-    width:100%;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    /* position:fixed; */
-     position:sticky;
-    top:1px;
-    z-index:10000;
-    
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/variables.css">
+  <link rel="stylesheet" href="/src/styles/reset.css">
+  <link rel="stylesheet" href="/src/styles/admin.css">
 
-}
-#nav>img{
-    height:80px;
-    /* width:200px; */
-}
-#nav>form{
-    /* border :1px solid blue; */
-    height:50px;
-    width:60%;
-    display:flex;
-    align-items: center;
-    
-}
-#nav>form>div{
-    border-top-left-radius:10px ;
-    border-bottom-left-radius:10px ;
-
-    padding-left: 10px;
-    height:40px;
-    background-color: #E9F6F7;
-    display:flex;
-    align-items: center;
-
-}
-#nav>form>input{
-    border-top-right-radius:10px ;
-    border-bottom-right-radius:10px ;
-
-    padding-left: 10px;
-    border:none;
-    background-color: #E9F6F7;
-    width:70%;
-    height:40px;
-    color:gray;
-    font-size: 20px;
-}
-#nav>form>button{
-    border:none;
-    color:white;
-    background-color: rgb(243, 82, 24);
-    border-radius: 10px;
-    font-size: 20px;
-    width:15%;
-    height:40px;
-}
-#nav>div{
-    /* border:2px solid; */
-    width:30%;
-    height:50px;
-    display:flex;
-    justify-content: space-around;
-    align-items:center;
-}
-#nav>div>a{
-    font-size: 25px;
-    color:darkcyan;
-}
-
-      
-table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  margin: auto;
-  margin-top: 50px;
-  text-align: center;
-}
-
-table td,
-table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
-
-
-
-table tr:hover {
-  background-color: #ddd;
-}
-
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: orangered;
-  color: white;
-  text-align: center;
-}
-h1{
-  background-color: orangered;
-  padding:10px 10px 10px 10px;
-  color:white;
-
-}
-
-    </style>
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
+  <script type="module" src="/src/scripts/admin-dashboard.js"></script>
 </head>
-<body>   
-  <div id="nav">
-    <img src="./images/project logo.png" alt="logo">
-    <form id="form">
-        <div>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <input type="text" id="S" placeholder="What is on your mind today?">
-        <button>Search</button>
-    </form>
-    <div id="anchore">
-    <!-- <a href=""><i class="fa-regular fa-bell"></i></a>
-    <a href=""><i class="fa-regular fa-heart"></i></a>
-    <a href=""><i class="fa-solid fa-cart-shopping"></i></a> -->
-    <a href="./productlist.html">Product-list</a>
-    <a href="./Admin.html">Sign out</a>
-    </div>
-    </div>
-  
- 
-   
-      </table>
+
+<body style="background-color: var(--bg-light);">
+
+  <main class="admin-container">
+    <header class="admin-header">
+      <div class="header-title">
+        <h1>Order Management</h1>
+      </div>
+
+      <nav class="admin-nav">
+        <a href="productlist.html">Products</a>
+        <a href="order.html" class="active">Orders</a>
+        <a href="#" id="logout-btn">Sign Out</a>
+      </nav>
+    </header>
+
+    <section class="table-container">
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>contact</th>
-            <th>Pincode</th>
-            <th>adress</th>
-            <th>state</th>
-            <th>products</th>
-            <th>conform</th>
+            <th>Order ID</th>
+            <th>Date</th>
+            <th>Customer</th>
+            <th>Address</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Actions</th>
           </tr>
         </thead>
-        <tbody id="pro">
-           <!-- Update the rows here using jsvascript -->
+        <tbody id="order-table-body">
+          <!-- Dynamic Content -->
         </tbody>
       </table>
+    </section>
+
+  </main>
+
 </body>
-<script>
-let orderdata=JSON.parse(localStorage.getItem("order"))||[];
-console.log(orderdata);
-let tbody=document.querySelector("#pro");
 
-   appendata(orderdata);
-   
-    function appendata(data){
-tbody.innerHTML="";
-data.forEach(function(ele,ind){
-    let tr=document.createElement("tr");
-    let td1=document.createElement("td");
-    td1.innerText=ele.name;
-    let td2=document.createElement("td");
-    td2.innerText=ele.mob;
-    let td3=document.createElement("td");
-    td3.innerText=ele.pin;
-    let td4=document.createElement("td");
-    td4.innerText=ele.address;
-    let td5=document.createElement("td");
-    td5.innerText=ele.state;
-    let td7=document.createElement("td");
-    td7.innerText="order Details";
-    let td6=document.createElement("td");
-    td6.innerText="Place-order";
-    td6.addEventListener("click",function(){
-    confirm("order send for delivery")
-        
-        
-    })
-    
-    tr.append(td1,td2,td3,td4,td5,td7,td6);
-    tbody.append(tr);
-    
-
-})}
-</script>
 </html>

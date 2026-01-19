@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ShopExpress</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
+  <script type="module" crossorigin src="/assets/product-CanfODIm.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/reset-CJzo-h3_.js">
+  <link rel="modulepreload" crossorigin href="/assets/main-CRS-uCLd.js">
+  <link rel="modulepreload" crossorigin href="/assets/notification-DfkSIDvh.js">
+  <link rel="stylesheet" crossorigin href="/assets/reset-D_2r0dET.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-BfS6lyys.css">
+  <link rel="stylesheet" crossorigin href="/assets/notification-Dq3BIEu8.css">
+  <link rel="stylesheet" crossorigin href="/assets/product-DewZlcci.css">
+  <link rel="stylesheet" crossorigin href="/assets/navbar-Pkb1rsTS.css">
+</head>
+
+<body>
+    <header id="nav">
+        <a href="/" class="logo-link">
+            <img src="/assets/project_logo-CppAKaOS.png" alt="ShopExpress Logo" class="logo-img">
+        </a>
+        <form id="search-form" class="search-bar">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input type="text" id="search-input" placeholder="Search for products...">
+            <button type="submit">Search</button>
+        </form>
+        <nav class="nav-links">
+            <a href="#" aria-label="Notifications" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
+            <a href="/cart.html" aria-label="Wishlist" class="icon-btn"><i class="fa-regular fa-heart"></i></a>
+            <a href="/cart.html" aria-label="Cart" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div id="user-info">
+                <a href="/signin.html" id="signin-link" class="auth-link">Sign In</a>
+                <div id="user-logged-in" style="display:none; position:relative;">
+                    <button id="user-dropdown-btn" class="icon-btn">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                    <div id="user-dropdown-menu" class="dropdown-menu">
+                        <a href="/User.html" class="dropdown-item"><i class="fa-regular fa-id-card"></i> Profile</a>
+                        <a href="/User.html" class="dropdown-item"><i class="fa-solid fa-box"></i> My Orders</a>
+                        <div class="dropdown-divider"></div>
+                        <button id="logout-btn-action" class="dropdown-item text-red"><i
+                                class="fa-solid fa-right-from-bracket"></i> Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-page-container">
+        <!-- Sidebar Filters -->
+        <aside class="filters-sidebar">
+            <div class="filter-header">
+                <h3>Filters</h3>
+                <button id="clear-filters" class="clear-btn">Clear All</button>
+            </div>
+
+            <div class="filter-group">
+                <h4>Category</h4>
+                <div class="filter-options" id="category-filters">
+                    <!-- Dynamic categories or static fallback -->
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="all" checked> All Categories
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="daily essential"> Daily Essentials
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="sport"> Sports
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="gadget"> Gadgets
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="festival"> Festival
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="brand"> Top Brands
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <div class="price-range-inputs">
+                    <input type="number" id="min-price" placeholder="Min">
+                    <span>-</span>
+                    <input type="number" id="max-price" placeholder="Max">
+                </div>
+                <button id="apply-price" class="apply-btn">Apply</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="products-content">
+            <div class="sorting-header">
+                <p id="product-count">Showing all products</p>
+                <div class="sort-container">
+                    <select name="sort" id="sorting" aria-label="Sort products">
+                        <option value="default">Sort by: Default</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="product-container" class="products-grid">
+                <!-- Products will be appended here by JS -->
+                <div class="loading-state">Loading products...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="trust-badge">
+            <h1>Band Of Trust</h1>
+            <div class="badges">
+                <div class="badge">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h2>Great Selection</h2>
+                </div>
+                <div class="badge">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h2>Low Price</h2>
+                </div>
+                <div class="badge">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h2>Speedy Delivery</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="link-column">
+                <h3>Shopper Central</h3>
+                <a href="#">Easy Returns</a>
+                <a href="#">Sign In/Register</a>
+                <a href="#">Our Policies</a>
+                <a href="#">Payment Options</a>
+            </div>
+            <div class="link-column">
+                <h3>Merchant Central</h3>
+                <a href="#">Merchant Panel</a>
+                <a href="#">How To Sell</a>
+                <a href="#">Commission Structure</a>
+            </div>
+            <div class="link-column">
+                <h3>About Us</h3>
+                <a href="#">History</a>
+                <a href="#">Band of Trust</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="link-column">
+                <h3>Contact</h3>
+                <a href="#">Support</a>
+                <a href="#">Press</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

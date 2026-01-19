@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Dashboard - ShopExpress Admin</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
+  <script type="module" crossorigin src="/assets/reset-CJzo-h3_.js"></script>
+  <script type="module" crossorigin src="/assets/admin-auth-CG9ZKg7P.js"></script>
+  <script type="module" crossorigin src="/assets/admin-dashboard-UaQ90mnK.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/reset-D_2r0dET.css">
+  <link rel="stylesheet" crossorigin href="/assets/admin-auth-DV7HRxLd.css">
+</head>
+
+<body style="background-color: var(--bg-light);">
+
+  <main class="admin-container">
+    <header class="admin-header">
+      <div class="header-title">
+        <h1>Admin Dashboard</h1>
+      </div>
+
+      <nav class="admin-nav">
+        <a href="productlist.html" class="active">Products</a>
+        <a href="order.html">Orders</a>
+        <a href="#" id="logout-btn">Sign Out</a>
+      </nav>
+    </header>
+
+    <section class="dashboard-actions">
+      <h2>Add New Product</h2>
+      <form id="add-product-form" class="action-form">
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input type="number" id="id" required placeholder="101">
+        </div>
+        <div class="form-group">
+          <label for="title">Product Name</label>
+          <input type="text" id="title" required placeholder="Wireless Earbuds">
+        </div>
+        <div class="form-group">
+          <label for="price">Price (₹)</label>
+          <input type="number" id="price" required placeholder="599.00">
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input type="text" id="category" placeholder="Electronics">
+        </div>
+        <div class="form-group">
+          <label for="image">Image URL</label>
+          <input type="url" id="image" placeholder="https://source.unsplash.com/...">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="auth-btn" id="btn">Add Product</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="product-table-body">
+          <!-- Dynamic Content -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

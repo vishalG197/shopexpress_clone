@@ -1,504 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>SHOPEXPRESS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopExpress - Your Daily Store</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Libraries -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./index.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/styles/variables.css">
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/navbar.css">
+    <link rel="stylesheet" href="/src/styles/footer.css">
+    <link rel="stylesheet" href="/src/styles/style.css">
 </head>
+
 <body>
-    <div id="nav">
-        <img src="./images/project logo.png" alt="logo">
-        <form id="form">
-            <div>
-            <i class="fa-solid fa-magnifying-glass"></i>
+    <header id="nav">
+        <a href="/" class="logo-link">
+            <img src="/src/assets/images/project_logo.png" alt="ShopExpress Logo" class="logo-img">
+        </a>
+        <form id="search-form" class="search-bar">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <input type="text" id="S" placeholder="What is on your mind today?">
-            <button>Search</button>
+            <input type="text" id="search-input" placeholder="What are you looking for?">
+            <button type="submit">Search</button>
         </form>
-        <div id="anchore">
-        <a href=""><i class="fa-regular fa-bell"></i></a>
-        <a href="./Usercart.html"><i class="fa-regular fa-heart"></i></a>
-        <a href="./Usercart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-        <div id="user-info">
-            <span id="user-name"></span>
-            <a href="#" id="logout-btn" style="display: none;">Logout</a>
-            <a href="./signin.html" id="signin-link" style="display: none;">Sign in</a>
-        </div>
-        </div>
-        </div>
-        <div class="searchdata">
-          <a href="./product.html">Men's</a>
-          <a href="./product.html">Women's</a>
-          <a href="./product.html">Essential</a>
-          <a href="./product.html">Sport</a>
-          <a href="./product.html">Health</a>
-          <a href="./product.html">Mobile & more</a>
-
-        </div>
-    <div id="slideshow">
-        <!-- append slide show here -->
-    </div>
-
-    <div class="gadget">
-        <!-- append gadget data here -->
-        <div>
-        <h2>Festival Special</h2>
-        <a href="./product.html"> <button>See More ></button>
-        </div></a>
-        <!-- Flickity HTML init -->
-        <div class="carousel" data-flickity='{ "groupCells": true }'>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/detailed/41945/HandloomPinkKurta1_1469600960.jpg" alt="error">
-            <p>Mens Ethics Were</p>
-            <p><b>Upto 80% Off</b></p>
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/detailed/85345/129033198_Untitled1copy_1506507048.jpg" alt="err">
-            <p>Ethenic footwear</p>
-            <p><b>upto 70% off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/thumbnails/88912/320/320/131487154GOLDENPEACOCK1512550255.jpg" alt="">
-            <p>Womens Ethics Wear</p>
-            <p><b>Upto 70% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/thumbnails/67262/320/320/IMAES9GDZV3NPG8M1491081901.jpg" alt="">
-            <p>Pooja Essential</p>
-            <p><b>Upto 70% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/thumbnails/84338/320/320/128352190Ganesh1505896312.jpg" alt="">
-            <p>Wall Decors</p>
-            <p><b>Min 60% off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/thumbnails/48680/320/320/61SUwF0UAAL1480795166.jpg" alt="">
-            <p>Wooden Temple</p>
-            <p><b>Upto 60% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/detailed/85345/129033198_Untitled1copy_1506507048.jpg" alt="err">
-            <p>Ethenic footwear</p>
-            <p><b>upto 70% off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/thumbnails/88912/320/320/131487154GOLDENPEACOCK1512550255.jpg" alt="">
-            <p>Womens Ethics Wear</p>
-            <p><b>Upto 70% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/thumbnails/67262/320/320/IMAES9GDZV3NPG8M1491081901.jpg" alt="">
-            <p>Pooja Essential</p>
-            <p><b>Upto 70% Off</b></p>
-
-          </div>
-
-        </div>
-        
-          
-    </div>
-
-    <div class="gadget">
-        <!-- append gadget data here -->
-        <div>
-        <h2>Daily Essential</h2>
-
-       <a href="./product.html"> <button>See More ></button></a>
-        
-        </div>
-        <!-- Flickity HTML init -->
-        <div class="carousel" data-flickity='{ "groupCells": true }'>
-
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/105520/280/1/149254102-105520442-1584863770.jpg" alt="">
-            <p>mask sanitiser and more</p>
-            <p><b>starting at ₹49</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/thumbnails/42332/280/1/966030079473255231PUTPaCZnL146606056314665883171470319810.jpg" alt="">
-            <p>Clening and dusting suppliers</p>
-            <p><b>starting at ₹109</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/105577/320/320/149274414-105577366-1585235325.jpg" alt="">
-            <p>Laundery Detergents</p>
-            <p><b>starting at ₹39</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg" alt="">
-            <p>kitchen Essential</p>
-            <p><b>starting at ₹49</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/105589/280/1/149278210-105589660-1585251645.jpg" alt="error">
-            <p>Cooking Essential</p>
-            <p><b>startin at ₹49</b></p>
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/105589/320/1/149278289-105589933-1585251885.jpg" alt="err">
-            <p>skin hair and body</p>
-            <p><b>starting at ₹99</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/105520/280/1/149254102-105520442-1584863770.jpg" alt="">
-            <p>mask sanitiser and more</p>
-            <p><b>starting at ₹49</b></p>
-
-           </div>
-           <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg" alt="">
-            <p>kitchen Essential</p>
-            <p><b>starting at ₹49</b></p>
-
-          </div>
-           </div>
-           </div>
-           </div>
-
-    <div class="gadget">
-        <!-- append gadget data here -->
-        <div>
-        <h2>Health and Sport</h2>
-       <a href="./product.html"> <button>See More ></button></a>
-        
-        </div>
-        <!-- Flickity HTML init -->
-        <div class="carousel" data-flickity='{ "groupCells": true }'>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/108803/280/1/150436700-108803780-1596188707.jpg" alt="error">
-            <p>Mediacl Equipment</p>
-            <p><b>Upto 80% off</b></p>
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/107160/280/1/149847355-107160132-1590790597.jpg" alt="err">
-            <p>yoga mats</p>
-            <p><b>Upto 80% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/95250/280/1/142772233-95250978-1544273464.jpg" alt="">
-            <p>skipping Ropes</p>
-            <p><b>starting @ 199</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/103419/280/1/148130677-103419160-1571212818.jpg" alt="">
-            <p>Nutrition and Suppliments</p>
-            <p><b>upto 80% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/thumbnails/27595/280/1/11448611056.jpg" alt="">
-            <p>Bottel and Shakers</p>
-            <p><b>Upto 80% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://gd.image-gmkt.com/li/066/347/1706347066.g_800-w-st_g.jpg" alt="">
-            <p>Fitness Watch</p>
-            <p><b>Upto 80% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/103419/280/1/148130677-103419160-1571212818.jpg" alt="">
-            <p>Nutrition and Suppliments</p>
-            <p><b>upto 80% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/thumbnails/27595/280/1/11448611056.jpg" alt="">
-            <p>Bottel and Shakers</p>
-            <p><b>Upto 80% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://gd.image-gmkt.com/li/066/347/1706347066.g_800-w-st_g.jpg" alt="">
-            <p>Fitness Watch</p>
-            <p><b>Upto 80% Off</b></p>
-
-          </div>
-         
-
- </div>
-        </div>
-        
-          
-    </div>
-    
-
-    <div class="gadget">
-        <!-- append gadget data here -->
-        <div>
-        <h2>Brand Store</h2>
-       <a href="./product.html"> <button>See More ></button></a>
-        
-        </div>
-        <!-- Flickity HTML init -->
-        <div class="carousel" data-flickity='{ "groupCells": true }'>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/104122/280/1/148627878-104122294-1577180435.jpg" alt="error">
-            <p>Khadi</p>
-            <p><b>Starting at ₹69</b></p>
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/108804/280/1/150437204-108804736-1602946705.jpg" alt="err">
-            <p>Philips</p>
-            <p><b>Upto 40% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/109124/280/1/150563834-109124498-1600113360.jpg" alt="">
-            <p>Vivo</p>
-            <p><b>Save Upto ₹5000</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/109013/280/1/150523151-109013699-1603186269.jpg" alt="">
-            <p>Realme </p>
-            <p><b>Save upto ₹5000</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images/thumbnails/34620/280/1/902417708981309282209372miltonwaterbottleset1434449243144186494711454507692145672090914577949341459228900.jpg" alt="">
-            <p>Miltons</p>
-            <p><b>Upto 60% Off</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/109822/280/1/150760050-109822495-1600850631.jpg" alt="">
-            <p>Redmi</p>
-            <p><b>Save upto ₹5000</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/95123/200/200/142672875-95123237-1645016499.jpg" alt="">
-            <p>HF1043 handfree</p>
-            <p><b>₹269</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/95155/200/200/142698419-95155481-1653692385.jpg" alt="">
-            <p>Digimate in the ear wire earphone</p>
-            <p><b>₹149</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/71795/200/200/128902274-71795769-1653057803.jpg" alt="">
-            <p>plextone g25 Earphone</p>
-            <p><b>₹1669</b></p>
-
- </div>
-        </div>
-        
-          
-    </div>
-
-    <div class="gadget">
-        <!-- append gadget data here -->
-        <div>
-        <h2>Your Gadgets Store</h2>
-       <a href="./product.html"> <button>See More ></button></a>
-        
-        </div>
-        <!-- Flickity HTML init -->
-        <div class="carousel" data-flickity='{ "groupCells": true }'>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/115246/200/200/152689876-115246212-1659944528.jpg" alt="error">
-            <p>vanerate headphone</p>
-            <p><b>₹269</b></p>
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/99370/200/200/145508146-99370521-1668508420.jpg" alt="err">
-            <p>twins woreless headphone</p>
-            <p><b>₹299</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/98012/200/200/144475154-98012302-1664648956.jpg" alt="">
-            <p>Refurbished Nokia 1110</p>
-            <p><b>₹999</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/81476/200/200/135627858-81476269-1665754103.jpg" alt="">
-            <p>MTR MT317 dual sim phone</p>
-            <p><b>₹269</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/115044/200/200/152634665-115044372-1629705035.jpg" alt="">
-            <p>ZEB-UC100 2.0 charger</p>
-            <p><b>₹139</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/115737/200/200/152853766-115737455-1637323013.jpg" alt="">
-            <p>hf 1066 Wireless bluetooth</p>
-            <p><b>₹269</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/95123/200/200/142672875-95123237-1645016499.jpg" alt="">
-            <p>HF1043 handfree</p>
-            <p><b>₹269</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/95155/200/200/142698419-95155481-1653692385.jpg" alt="">
-            <p>Digimate in the ear wire earphone</p>
-            <p><b>₹149</b></p>
-
-          </div>
-          <div class="carousel-cell">
-            <img src="https://cdn.shopclues.com/images1/thumbnails/71795/200/200/128902274-71795769-1653057803.jpg" alt="">
-            <p>plextone g25 Earphone</p>
-            <p><b>₹1669</b></p>
-
- </div>
-        </div>
-        
-          
-    </div>
-
-
-    <div class="footer">
-        <h1>Band Of Trust</h1>
-        <div id="logo">
-            <div>
-                <i class="fa-solid fa-circle-check"></i>
-                <h2>Great Selection</h2>
-            </div>
-            <div>
-            <i class="fa-solid fa-hand-holding-dollar"></i>
-                <h2>Low Price</h2>
-            </div>
-            <div>
-                
-        <i class="fa-solid fa-cart-shopping"></i>
-        <h2>Speedy Delivery</h2>
-
-        </div>
-        </div>
-        <div class="imf">
-            <div>
-
-<h2>Shopper Central</h2>
-<p>Easy Returns & Replacement</p> 
- <p>Sign In/Register</p> 
- <p> Our Policies </p>
-<p> CluesBucks </p>
-<p> Payment Options </p>
-<p> ShopClues Bazaar Surety </p>
-<p> FAQs (Help) </p>
-<p> Service Centers </p>
-<p> User Agreement </p>
-            </div>
-            <div>
-                <h2>Merchant Central</h2>
-                <p>Merchant Panel</p>
-                <p>How To Sell</p>
-                <p>Commission Structure</p>
-                <p>Fullfillment Policy</p>
-                <p>Policies & Rules</p>
-                <p>User Agreement</p>
-                <p>Testimonials</p>
-                <p>Seller Summit</p>
-                <p>Merchant Blog</p>
-                <p>Developer Resources </p>
-            </div>
-            <div>
-                 <h2>About Us</h2> 
-                 <p>History</p>
-                 <p>Band of Trust</p>
-                 <p>In the News</p>
-                 <p>Awards</p>
-                 <p>Careers</p>
-                 <p>Blog</p> 
+        <nav class="nav-links">
+            <a href="#" aria-label="Notifications" class="icon-btn"><i class="fa-regular fa-bell"></i></a>
+            <a href="/cart.html" aria-label="Wishlist" class="icon-btn"><i class="fa-regular fa-heart"></i></a>
+            <a href="/cart.html" aria-label="Cart" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div id="user-info">
+                <a href="/signin.html" id="signin-link" class="auth-link">Sign In</a>
+                <div id="user-logged-in" style="display:none; position:relative;">
+                    <button id="user-dropdown-btn" class="icon-btn">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                    <div id="user-dropdown-menu" class="dropdown-menu">
+                        <a href="/User.html" class="dropdown-item"><i class="fa-regular fa-id-card"></i> Profile</a>
+                        <a href="/User.html" class="dropdown-item"><i class="fa-solid fa-box"></i> My Orders</a>
+                        <div class="dropdown-divider"></div>
+                        <button id="logout-btn-action" class="dropdown-item text-red"><i
+                                class="fa-solid fa-right-from-bracket"></i> Logout</button>
+                    </div>
                 </div>
-            <div>
-               <h2>Contact Us</h2>
-               <p>Merchant Support</p>
-               <p>Bulk Orders</p>
-               <p>Press</p>
             </div>
-            <div>
-                <h2>Press</h2>
-                <p>In the news</p>
+        </nav>
+    </header>
+
+    <nav class="category-bar">
+        <a href="./product.html">Men's</a>
+        <a href="./product.html">Women's</a>
+        <a href="./product.html">Essentials</a>
+        <a href="./product.html">Sports</a>
+        <a href="./product.html">Health</a>
+        <a href="./product.html">Mobile & More</a>
+    </nav>
+
+    <main>
+        <section id="slideshow" aria-label="Promotional Banner">
+            <!-- append slide show here -->
+        </section>
+
+        <section class="products-section">
+            <div class="section-header">
+                <h2>Festival Special</h2>
+                <a href="./product.html?category=women's clothing" class="see-more">See More <i
+                        class="fa-solid fa-chevron-right"></i></a>
+            </div>
+
+            <div id="festival-carousel" class="carousel">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="section-header">
+                <h2>Daily Essentials</h2>
+                <a href="./product.html" class="see-more">See More <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div id="essentials-carousel" class="carousel">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="section-header">
+                <h2>Gadget Store</h2>
+                <a href="./product.html?category=electronics" class="see-more">See More <i
+                        class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div id="gadget-carousel" class="carousel">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="trust-badge">
+            <h1>Band Of Trust</h1>
+            <div class="badges">
+                <div class="badge">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h2>Great Selection</h2>
+                </div>
+                <div class="badge">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h2>Low Price</h2>
+                </div>
+                <div class="badge">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h2>Speedy Delivery</h2>
+                </div>
             </div>
         </div>
 
+        <div class="footer-links">
+            <div class="link-column">
+                <h3>Shopper Central</h3>
+                <a href="#">Easy Returns</a>
+                <a href="#">Sign In/Register</a>
+                <a href="#">Our Policies</a>
+                <a href="#">Payment Options</a>
+            </div>
+            <div class="link-column">
+                <h3>Merchant Central</h3>
+                <a href="#">Merchant Panel</a>
+                <a href="#">How To Sell</a>
+                <a href="#">Commission Structure</a>
+            </div>
+            <div class="link-column">
+                <h3>About Us</h3>
+                <a href="#">History</a>
+                <a href="#">Band of Trust</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="link-column">
+                <h3>Contact</h3>
+                <a href="#">Support</a>
+                <a href="#">Press</a>
+            </div>
         </div>
-    </div>
+    </footer>
 
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script type="module" src="/src/scripts/main.js"></script>
 </body>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="./index.js" ></script>
-
-<style>
-    #user-info {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    #user-name {
-        color: #2563eb;
-        font-weight: 500;
-    }
-
-    #logout-btn {
-        color: #ef4444;
-        text-decoration: none;
-        font-size: 0.9rem;
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.25rem;
-        transition: all 0.3s ease;
-    }
-
-    #logout-btn:hover {
-        background-color: #fee2e2;
-    }
-</style>
-
-<script>
-    // Check user login status
-    document.addEventListener('DOMContentLoaded', function() {
-        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        const userNameElement = document.getElementById('user-name');
-        const logoutBtn = document.getElementById('logout-btn');
-        const signinLink = document.getElementById('signin-link');
-
-        if (currentUser) {
-            userNameElement.textContent = currentUser.name;
-            logoutBtn.style.display = 'block';
-            signinLink.style.display = 'none';
-        } else {
-            userNameElement.textContent = '';
-            logoutBtn.style.display = 'none';
-            signinLink.style.display = 'block';
-        }
-
-        // Handle logout
-        logoutBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            localStorage.removeItem('currentUser');
-            window.location.reload();
-        });
-    });
-</script>
 
 </html>

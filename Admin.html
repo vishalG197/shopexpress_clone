@@ -1,189 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopExpress</title>
+    <title>Admin Login - ShopExpress</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/styles/variables.css">
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/admin.css">
+
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/29fa0742fa.js" crossorigin="anonymous"></script>
-    <style>
-        body{
-            margin:0;
-            padding:0;
-        
-        }
-        .con{
-            /* border:1px solid red; */
-            margin:auto;
-            width:100%;
-            /* margin-top: 20px; */
-            /* margin-bottom: 20px; */
-            display:flex;
-            /* grid-template-columns: repeat(2,1fr); */
-            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-
-
-        }
-        #offer{
-            width:50%;
-            height:100vh;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-
-            /* border:1px solid blue; */
-        }
-        #sign{
-            
-            width:70%;
-            /* border:1px solid ; */
-            height:100vh;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-
-        }
-        #offer>div{
-            margin-top:50px;
-            text-align: center;
-            color:gray;
-
-        }
-        .bar{
-            margin-top: 20px;
-            display:grid;
-            grid-template-columns: 150px 150px 150px;
-            border-bottom: 2px;
-            gap:50px;
-
-
-        }
-        .bar>a{
-            margin-left: 50px;
-            margin-top: 10px;
-        }
-        .div{
-            margin:auto;
-            width:80%;
-            margin-top: 30px;
-
-        }
-        #form>div{
-            /* border:1px solid red; */
-            height:20px;
-            width:70%;
-            display:flex;
-            justify-content: space-between;
-
-        }
-        #sign>h1{
-            margin-left:20px;
-            margin-bottom:20px;
-        }
-        #sign>form{
-            margin-left:20px;
-            
-        }
-        #form>input{
-            
-            color:gray;
-            font-size: 20px;
-            margin-bottom:10px;
-            width:70%;
-            height:50px;
-        }
-        #submit{
-            margin-top:20px;
-            background-color: orangered;
-            color:whitesmoke;
-            border-radius: 10px;
-            border:none;
-        }
-        #submit:hover{
-            border:2px blue;
-        }
-    </style>
+    <script type="module" src="/src/scripts/admin-auth.js"></script>
 </head>
-<body>
-    <div class="con">
-    <div id="offer">
-            <div>
-            <i  style="color:darkcyan;font-size:40px;" class="fa-solid fa-hand-holding-dollar"></i>
 
-                <h3>Loylty point</h3>
-                <p>Earn CluesBucks on prepaid orders</p>
+<body style="background-color: var(--bg-light);">
 
-            </div>
-            <div>
-                <i style="color:darkcyan;font-size:40px;" class="fa-solid fa-circle-check"></i>
-
-                <h2>Exclusive Offers
-                </h2>
-                <p>For special offers & value deals
-                </p>
-            </div>
-            <div>
-                
-        <i  style="color:darkcyan;font-size:40px;" class="fa-solid fa-cart-shopping"></i>
-        <h2>Instant Checkout</h2>
-        <p>Hassle-Free Payment Everytime</p>
-
+    <div class="auth-container">
+        <div class="auth-header">
+            <i class="fa-solid fa-lock"></i>
+            <h1>Admin Login</h1>
+            <p style="color: var(--text-gray);">Manage your store efficiently</p>
         </div>
-    </div>
-    <div id="sign">
-        <div class="bar">
-            <a href="./signin.html"> For User </a>
-            <a href="./Admin.html">For Admin</a>
-            <a href="./index.html">Home</a>
 
-        </div>
-        <div class="div">
-        <h1 >Only For The Admin</h1>
-        <form id="form">
-            <h4>Email</h4>
-          <input type="email" id="email" placeholder="Enter Your Email" />
-          <h4>Password</h4>
-          <input type="password" id="password" placeholder="Password"/>
-          <div class="a">
-          <a href="./adminregister.html">Dont have account?</a>
-          <a href="./adminregister.html">Create Account</a>
-          </div>
-          <input style="color:white" id="submit" type="submit" value="Submit" />
+        <form id="login-form" class="auth-form">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="admin@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="••••••••">
+            </div>
+
+            <button type="submit" class="auth-btn">Sign In</button>
         </form>
+
+        <div class="auth-links">
+            <a href="adminregister.html">Create Admin Account</a> |
+            <a href="index.html">Back to Store</a>
+        </div>
     </div>
-    </div>
-</div>
+
 </body>
-<script>
-//       
-document.querySelector("form")
-    .addEventListener("submit",result);
-    function result(){
-      event.preventDefault();
-      let inid=document.querySelector("#email");
-      let inpass=document.querySelector("#password");
-      let data={
-        // name:form.name.value,
-        signid:inid.value,signpass:inpass.value,
-      }
-      console.log(data)
 
-      let Udata=JSON.parse(localStorage.getItem("admin-data"))||[];
-     let n=Udata.length;
-     console.log(Udata);
-       let Usersignin=JSON.parse(localStorage.getItem("adminsighin"))||[];
-      Usersignin.push(data);
-      let m=Usersignin.length;
-        // console.log(data.signid,Udata[n-1].Name);
-// for(let i=0;i<n;i++)
-        if(Udata[n-1].Email===data.signid&&Udata[n-1].Password===Usersignin[m-1].signpass){
-           
-       alert("Sign in Successful");
-       location.href="productlist.html"
-
-
-       }else {
-        alert("Wrong Credentials");
-       }
-  localStorage.setItem("adminsighin",JSON.stringify(Usersignin));
-      
-  }
-
-</script>
 </html>
